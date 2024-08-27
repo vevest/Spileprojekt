@@ -1,0 +1,309 @@
+main, header, footer{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightpink;
+    padding: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 25px;
+    color: darkmagenta;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#screen{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#game{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/startscreen.svg);
+    background-size: cover;
+  }
+
+#game_over {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/game_over.svg);
+    background-color: white;
+    background-size: cover;
+  }
+  
+#level_complete {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/level_complete.svg);
+    background-color: white;
+    background-size: cover;
+  }
+
+#game_ui {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+#game_background{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/background.svg) ;
+    background-size: cover;
+}
+
+#disco_container{
+    width: 25%;
+    aspect-ratio: 5.5/4.5;
+    position:absolute;
+    top: 0%;
+    left: 23%;
+}
+
+#disco_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/disco.png);
+    background-size: cover;
+}
+
+
+#game_elements{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+  /* ----------- spil - elementer---------------*/
+
+
+#frontchair_container1{
+    width: 25%;
+    aspect-ratio: 5.12/4.31;
+    position:absolute;
+    top: 62.5%;
+    left: 0%;
+}
+
+#frontchair1_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/chair.svg);
+    background-size: cover;
+}
+
+#frontchair_container2{
+    width: 25%;
+    aspect-ratio: 5.12/4.31;
+    position:absolute;
+    top: 62.5%;
+    left: 70%;
+}
+
+#frontchair2_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/chair.svg);
+    background-size: cover;
+}
+
+#armchair_container1{
+    width: 20%;
+    aspect-ratio: 5.5/4.5;
+    position:absolute;
+    top: 39%;
+    left: 25%;
+}
+
+#armchair1_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/armchair.svg);
+    background-size: cover;
+}
+
+#armchair_container2{
+    width: 22%;
+    aspect-ratio: 5.5/4.5;
+    position:absolute;
+    top: 40%;
+    left: 48%;
+}
+
+#armchair2_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/armchair.svg);
+    background-size: cover;
+}
+
+#diaper_container{
+    width: 8%;
+    aspect-ratio: 212/214;
+    position:absolute;
+}
+
+#diaper_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/diaper.svg);
+    background-size: cover;
+}
+
+#gebis_container{
+    width: 7%;
+    aspect-ratio: 230/192;
+    position:absolute;
+}
+
+#gebis_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gebis.svg);
+    background-size: cover;
+}
+
+#panty_container{
+    width: 12%;
+    aspect-ratio: 1.5/1;
+    position:absolute;
+}
+
+#panty_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/panty.svg);
+    background-size: cover;
+}
+
+
+
+
+/*--------------------- point og liv-----------------*/
+
+#points,
+#lives {
+  font-family: Georgia, serif;
+  margin: 0;
+  color: black;
+  position: absolute;
+  font-size: 200%;
+}
+#lives {
+  left: 49%;
+  top: 80%;
+}
+#points {
+  left: 38.5%;
+  top: 80%;
+}
+
+
+/*-----------knap----------------*/
+#play_game1 {
+    cursor: pointer;
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 35/20 ;
+    background-image: url("../img/startbutton.svg");
+    background-size: cover;
+    left: 37%;
+    top: 68%;
+  }
+
+  #play_again1 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("../img/try_again.svg");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+  #play_again2 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("../img/try_again.svg");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+
+
+/*---------- positioner -----------*/
+  .pos1 {
+    top: 62.5%;
+    left: 7%;
+  }
+  .pos2 {
+    top: 62.5%;
+    left: 76%;
+  }
+  .pos3 {
+    top: 39%;
+    left: 31%;
+  }
+  .pos4 {
+    top: 40%;
+    left: 54%;
+  }
+
+
+
+/* ---------------------------- Delay ---------------------------- */
+.delay1 {
+    animation-delay: 0s;
+  }
+  
+  .delay2 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay3 {
+    animation-delay: 1s;
+  }
+  
+  .delay4 {
+    animation-delay: 1.5s;
+  }
+

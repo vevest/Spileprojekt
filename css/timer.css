@@ -1,0 +1,42 @@
+/* eksempel på en grøn, gul rød timer*/
+
+#timer_container{
+    position: absolute;
+    width: 3vw;
+    height: 19vw;
+    top: 34vw;
+    left: 93vw;
+    border: 2px solid black;
+}
+
+#timer_sprite{
+    width: 3vw;
+    height: 19vw;
+    top: 34vw;
+    left: 93vw;
+    transform-origin: 50% 100%;
+    background-color: limegreen;
+}
+
+.shrink{
+    animation-name: shrink_time;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes shrink_time{
+    0% {
+        scale: 1 1;
+        background-color: limegreen ;
+    }
+    50% {
+        background-color: rgb(255, 230, 0);
+    }
+    100% {
+        scale: 1 0;
+        background-color: red;
+    }
+
+}
