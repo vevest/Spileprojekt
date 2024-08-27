@@ -252,6 +252,123 @@ nav a{
     background-size: cover;
 }
 
+#adobe_container{
+    width: 10%;
+    aspect-ratio: 431/439;
+    position:absolute;
+}
+
+#adobe_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/adobe.png);
+    background-size: cover;
+}
+
+#beer_container{
+    width: 9%;
+    aspect-ratio: 431/439;
+    position:absolute;
+}
+
+#beer_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/beer.png);
+    background-size: cover;
+}
+
+#diagram_container{
+    width: 9%;
+    aspect-ratio: 431/439;
+    position:absolute;
+}
+
+#diagram_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/diagram.png);
+    background-size: cover;
+}
+
+#diaper_container{
+    width: 8%;
+    aspect-ratio: 212/214;
+    position:absolute;
+}
+
+#diaper_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/diaper.svg);
+    background-size: cover;
+}
+
+#gebis_container{
+    width: 7%;
+    aspect-ratio: 230/192;
+    position:absolute;
+}
+
+#gebis_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gebis.svg);
+    background-size: cover;
+}
+
+#panty_container{
+    width: 12%;
+    aspect-ratio: 1.5/1;
+    position:absolute;
+}
+
+#panty_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/panty.svg);
+    background-size: cover;
+}
+
+#diaper_container{
+    width: 8%;
+    aspect-ratio: 212/214;
+    position:absolute;
+}
+
+#diaper_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/diaper.svg);
+    background-size: cover;
+}
+
+#gebis_container{
+    width: 7%;
+    aspect-ratio: 230/192;
+    position:absolute;
+}
+
+#gebis_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gebis.svg);
+    background-size: cover;
+}
+
+#panty_container{
+    width: 12%;
+    aspect-ratio: 1.5/1;
+    position:absolute;
+}
+
+#panty_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/panty.svg);
+    background-size: cover;
+}
+
 
 
 
