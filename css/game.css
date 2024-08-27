@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "chelsea";
+    src: url(//fonts/Chelsea_Market.zip);
+  }
+
+
+
 main, header, footer{
     max-width: 1400px;
     margin: 0 auto;
@@ -13,9 +20,9 @@ nav{
 nav a{
     text-decoration: none;
     font-size: 25px;
-    color: darkmagenta;
+    color: black;
     font-weight: 400;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'chelsea';
 }
 
 #screen{
@@ -38,28 +45,61 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/startscreen.svg);
+    background-image: url(img/startscreen.png);
     background-size: cover;
   }
 
-#game_over {
+#level_complete1 {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/game_over.svg);
+    background-image: url(img/endscreen-camera.png);
     background-color: white;
     background-size: cover;
   }
   
-#level_complete {
+#level_complete2 {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/level_complete.svg);
+    background-image: url(img/endscreen-code.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #level_complete3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-island.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #level_complete4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-joe.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #level_complete5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-presentation.png);
     background-color: white;
     background-size: cover;
   }
@@ -79,25 +119,9 @@ nav a{
     left: 0%;
     width: 100%;
     height: 100%;
-    background-image: url(../img/background.svg) ;
+    background-image: url(img/gamescreen.png) ;
     background-size: cover;
 }
-
-#disco_container{
-    width: 25%;
-    aspect-ratio: 5.5/4.5;
-    position:absolute;
-    top: 0%;
-    left: 23%;
-}
-
-#disco_sprite{
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/disco.png);
-    background-size: cover;
-}
-
 
 #game_elements{
     position: absolute;
@@ -112,65 +136,82 @@ nav a{
   /* ----------- spil - elementer---------------*/
 
 
-#frontchair_container1{
+/* #tableandchair_container1{
     width: 25%;
-    aspect-ratio: 5.12/4.31;
+    aspect-ratio: 650/685;
     position:absolute;
-    top: 62.5%;
-    left: 0%;
+    top: 50%;
+    left:7%;
 }
 
-#frontchair1_sprite{
+#tableandchair_sprite1{
     width: 100%;
     height: 100%;
-    background-image: url(../img/chair.svg);
+    background-image: url(img/tableandchair.png);
     background-size: cover;
-}
+} */
 
-#frontchair_container2{
+#tableandchair_container2{
     width: 25%;
-    aspect-ratio: 5.12/4.31;
+    aspect-ratio: 650/685;
     position:absolute;
-    top: 62.5%;
-    left: 70%;
+    top: 50%;
+    left: 27%;
 }
 
-#frontchair2_sprite{
+#tableandchair_sprite2{
     width: 100%;
     height: 100%;
-    background-image: url(../img/chair.svg);
+    background-image: url(img/tableandchair.png);
     background-size: cover;
 }
 
-#armchair_container1{
-    width: 20%;
-    aspect-ratio: 5.5/4.5;
+#tableandchair_container3{
+    width: 25%;
+    aspect-ratio: 650/685;
     position:absolute;
-    top: 39%;
-    left: 25%;
+    top: 50%;
+    left: 52%;
 }
 
-#armchair1_sprite{
+#tableandchair_sprite3{
     width: 100%;
     height: 100%;
-    background-image: url(../img/armchair.svg);
+    background-image: url(img/tableandchair.png);
     background-size: cover;
 }
 
-#armchair_container2{
+#globus_container{
     width: 22%;
-    aspect-ratio: 5.5/4.5;
+    aspect-ratio: 650/631;
     position:absolute;
-    top: 40%;
-    left: 48%;
+    top: 64%;
+    left: 5%;
 }
 
-#armchair2_sprite{
+#globus_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/armchair.svg);
+    background-image: url(img/globus.png);
     background-size: cover;
 }
+
+#taske_container{
+    width: 20%;
+    aspect-ratio: 650/635;
+    position:absolute;
+    top: 68%;
+    left: 83%;
+}
+
+#taske_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/taske.png);
+    background-size: cover;
+}
+
+/* -----------------klikbarer elementer ----------*/
 
 #diaper_container{
     width: 8%;
