@@ -1,0 +1,464 @@
+@font-face {
+    font-family: "chelsea";
+    src: url(//fonts/Chelsea_Market.zip);
+  }
+
+
+
+main, header, footer{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightpink;
+    padding: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-weight: 400;
+    font-family: 'chelsea';
+}
+
+#screen{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#game{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/startscreen.png);
+    background-size: cover;
+  }
+
+#level_complete1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-camera.png);
+    background-color: white;
+    background-size: cover;
+  }
+  
+#level_complete2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-code.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #level_complete3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-island.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #level_complete4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-joe.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #level_complete5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/endscreen-presentation.png);
+    background-color: white;
+    background-size: cover;
+  }
+
+  #instructions {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(assets/instructions.svg);
+    background-color: white;
+    background-size: cover;
+  }
+
+#game_ui {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+#game_background{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/gamescreen.png) ;
+    background-size: cover;
+}
+
+#game_elements{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+  /* ----------- spil - elementer---------------*/
+
+
+#tableandchair_container1{
+    width: 23%;
+    aspect-ratio: 650/685;
+    position:absolute;
+    top: 51%;
+    left:10%;
+}
+
+#tableandchair_sprite1{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/tableandchair.png);
+    background-size: cover;
+}
+
+#tableandchair_container2{
+    width: 25%;
+    aspect-ratio: 650/685;
+    position:absolute;
+    top: 57.5%;
+    left: 34%;
+}
+
+#tableandchair_sprite2{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/tableandchair.png);
+    background-size: cover;
+}
+
+#tableandchair_container3{
+    width: 23%;
+    aspect-ratio: 650/685;
+    position:absolute;
+    top: 51%;
+    left: 60%;
+}
+
+#tableandchair_sprite3{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/tableandchair.png);
+    background-size: cover;
+}
+
+
+/* -----------------klikbarer elementer ----------*/
+
+#diaper_container{
+    width: 8%;
+    aspect-ratio: 212/214;
+    position:absolute;
+}
+
+#diaper_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/diaper.svg);
+    background-size: cover;
+}
+
+#gebis_container{
+    width: 7%;
+    aspect-ratio: 230/192;
+    position:absolute;
+}
+
+#gebis_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gebis.svg);
+    background-size: cover;
+}
+
+#panty_container{
+    width: 12%;
+    aspect-ratio: 1.5/1;
+    position:absolute;
+}
+
+#panty_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/panty.svg);
+    background-size: cover;
+}
+
+#adobe_container{
+    width: 10%;
+    aspect-ratio: 431/439;
+    position:absolute;
+}
+
+#adobe_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/adobe.png);
+    background-size: cover;
+}
+
+#beer_container{
+    width: 9%;
+    aspect-ratio: 431/439;
+    position:absolute;
+}
+
+#beer_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/beer.png);
+    background-size: cover;
+}
+
+#diagram_container{
+    width: 9%;
+    aspect-ratio: 431/439;
+    position:absolute;
+}
+
+#diagram_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/diagram.png);
+    background-size: cover;
+}
+
+#diaper_container{
+    width: 8%;
+    aspect-ratio: 212/214;
+    position:absolute;
+}
+
+#diaper_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/diaper.svg);
+    background-size: cover;
+}
+
+#gebis_container{
+    width: 7%;
+    aspect-ratio: 230/192;
+    position:absolute;
+}
+
+#gebis_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gebis.svg);
+    background-size: cover;
+}
+
+#panty_container{
+    width: 12%;
+    aspect-ratio: 1.5/1;
+    position:absolute;
+}
+
+#panty_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/panty.svg);
+    background-size: cover;
+}
+
+#diaper_container{
+    width: 8%;
+    aspect-ratio: 212/214;
+    position:absolute;
+}
+
+#diaper_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/diaper.svg);
+    background-size: cover;
+}
+
+#gebis_container{
+    width: 7%;
+    aspect-ratio: 230/192;
+    position:absolute;
+}
+
+#gebis_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gebis.svg);
+    background-size: cover;
+}
+
+#panty_container{
+    width: 12%;
+    aspect-ratio: 1.5/1;
+    position:absolute;
+}
+
+#panty_sprite{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/panty.svg);
+    background-size: cover;
+}
+
+
+
+
+/*--------------------- point og liv-----------------*/
+
+#points,
+#lives {
+  font-family: Georgia, serif;
+  margin: 0;
+  color: black;
+  position: absolute;
+  font-size: 200%;
+}
+#lives {
+  left: 49%;
+  top: 80%;
+}
+#points {
+  left: 38.5%;
+  top: 80%;
+}
+
+
+/*-----------knap----------------*/
+#play_game1 {
+    cursor: pointer;
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 35/20 ;
+    background-image: url("../img/startbutton.svg");
+    background-size: cover;
+    left: 37%;
+    top: 68%;
+  }
+
+  #play_again1 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("../img/try_again.svg");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+  #play_again2 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("../img/try_again.svg");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+
+
+/*---------- positioner -----------*/
+  .pos1 {
+    top: 62.5%;
+    left: 7%;
+  }
+  .pos2 {
+    top: 62.5%;
+    left: 76%;
+  }
+  .pos3 {
+    top: 39%;
+    left: 31%;
+  }
+  .pos4 {
+    top: 40%;
+    left: 54%;
+  }
+
+
+
+/* ---------------------------- Delay ---------------------------- */
+.delay1 {
+    animation-delay: 0s;
+  }
+  
+  .delay2 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay3 {
+    animation-delay: 1s;
+  }
+  
+  .delay4 {
+    animation-delay: 1.5s;
+  }
+
+
+  /*------ morten-------*/
+
+  #morten_container {
+    background-image: url(assets/Kat.svg);
+    background-size: cover;
+    aspect-ratio: 220/290;
+    position: absolute;
+    top: 84%;
+    left: 92%;
+    width: 12%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+

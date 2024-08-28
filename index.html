@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Mortens Kyllinger</title>
-
-    <link rel="stylesheet" href="https://use.typekit.net/evg4aff.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/timer.css">
 </head>
 <body>
     
@@ -55,8 +56,14 @@
                     <div id="pillow_container">
                         <div id="pillow_sprite"></div>
                     </div>
-                    <div id="tableandchair_container">
-                        <div id="tableandchair_sprite"></div>
+                    <div id="tableandchair_container1">
+                        <div id="tableandchair_sprite1"></div>
+                    </div>
+                    <div id="tableandchair_container2">
+                        <div id="tableandchair_sprite2"></div>
+                    </div>
+                    <div id="tableandchair_container3">
+                        <div id="tableandchair_sprite3"></div>
                     </div>
                     <div id="talebobbel_container">
                         <div id="talebobbel_sprite"></div>
@@ -91,6 +98,24 @@
                     <div id="bird6_container">
                         <div id="bird6_sprite"></div>
                     </div>
+                    <div id="bird-end1_container">
+                        <div id="bird-end1_sprite"></div>
+                    </div>
+                    <div id="bird-end2_container1">
+                        <div id="bird-end2_sprite"></div>
+                    </div>
+                    <div id="bird-end3_container">
+                        <div id="bird-end3_sprite"></div>
+                    </div>
+                    <div id="bird-end4_container1">
+                        <div id="bird-end4_sprite"></div>
+                    </div>
+                    <div id="bird-end5_container">
+                        <div id="bird-end5_sprite"></div>
+                    </div>
+                    <div id="bird-end6_container">
+                        <div id="bird-end6_sprite"></div>
+                    </div>
                     <div id="morten_container">
                         <div id="morten_sprite"></div>
                     </div>
@@ -104,31 +129,38 @@
                         <div id="hello-hand_sprite"></div>
                     </div>
                 </div>
-                <div id="game_foreground"></div>
+                <div id="game_foreground">
+                    <div id="cat_container"></div>
+                </div>
                 <div id="game_ui">
-                    <div id="points_container">
-                        <div id="points_sprite">0</div>
-                    </div>
-                    <div id="points"></div>
-                    <div id="lives"></div>
                     <div id="time_container">
-                        <div id="penis_outline"></div>
-                        <div id="penis_fill" class="penistimer"></div>
+                        <div id="timer_outline"></div>
+                        <div id="timer_fill" class="timer"></div>
                     </div>
                 </div>   
             </div>
             <div id="start" class="hide">
-                <div id="play_game1"></div>
+                <div id="play_game"></div>
             </div>
-            <div id="game_over" class="hide">
-                <div id="play_again1"></div>
+            <div id="level_complete1" class="hide">
+                <div id="play_again"></div>
             </div>
-            <div id="level_complete" class="hide">
-                <div id="play_again2"></div>
+            <div id="level_complete2" class="hide">
+                <div id="play_again"></div>
+            </div>
+            <div id="level_complete3" class="hide">
+                <div id="play_again"></div>
+            </div>
+            <div id="level_complete4" class="hide">
+                <div id="play_again"></div>
+            </div>
+            <div id="level_complete5" class="hide">
+                <div id="play_again"></div>
             </div>
         </div>
 
     </main>
+    <script src="js/spil.js"></script>
 
 </body>
 </html>
