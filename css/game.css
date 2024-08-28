@@ -462,3 +462,18 @@ nav a{
     transform: translate(-50%, -50%);
   }
 
+
+  /* STARTSIDE */
+  #spiltitel {
+    background-image: url(img/mortenskyllinger.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 220/290;
+    position: absolute;
+    height: 10%;
+    width: 50%;
+    top: 40%;
+    left: 25%;
+    background-color: #F0EDE1;
+  }
