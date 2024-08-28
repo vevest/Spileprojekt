@@ -39,7 +39,7 @@ nav a{
     height: 100%;
 }
 
-#start {
+#title_screen {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -77,10 +77,11 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-island.png);
+    background-image: url(img/endscreen-presentation.png);
     background-color: white;
     background-size: cover;
   }
+
 
   #level_complete4 {
     width: 100%;
@@ -88,7 +89,7 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-joe.png);
+    background-image: url(img/endscreen-island.png);
     background-color: white;
     background-size: cover;
   }
@@ -99,10 +100,12 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-presentation.png);
+    background-image: url(img/endscreen-joe.png);
     background-color: white;
     background-size: cover;
   }
+
+  
 
   #instructions {
     width: 100%;
@@ -110,7 +113,7 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(assets/instructions.svg);
+    background-image: url(img/gamescreen.png);
     background-color: white;
     background-size: cover;
   }
@@ -195,46 +198,50 @@ nav a{
 
 /* -----------------klikbarer elementer ----------*/
 
-#diaper_container{
+#figma_container{
+    cursor: grab;
     width: 8%;
     aspect-ratio: 212/214;
     position:absolute;
 }
 
-#diaper_sprite{
+#figma_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/diaper.svg);
+    background-image: url(img/figma.png);
     background-size: cover;
 }
 
-#gebis_container{
+#fail_container{
+    cursor: grab;
     width: 7%;
     aspect-ratio: 230/192;
     position:absolute;
 }
 
-#gebis_sprite{
+#fail_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/gebis.svg);
+    background-image: url(img/fail.png);
     background-size: cover;
 }
 
-#panty_container{
+#zipfil_container{
+    cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
 }
 
-#panty_sprite{
+#zipfil_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/panty.svg);
+    background-image: url(img/zipfil.png);
     background-size: cover;
 }
 
 #adobe_container{
+    cursor: grab;
     width: 10%;
     aspect-ratio: 431/439;
     position:absolute;
@@ -248,7 +255,8 @@ nav a{
 }
 
 #beer_container{
-    width: 9%;
+    cursor: grab;
+    width: 10%;
     aspect-ratio: 431/439;
     position:absolute;
 }
@@ -261,6 +269,7 @@ nav a{
 }
 
 #diagram_container{
+    cursor: grab;
     width: 9%;
     aspect-ratio: 431/439;
     position:absolute;
@@ -273,81 +282,87 @@ nav a{
     background-size: cover;
 }
 
-#diaper_container{
+#loop_container{
+    cursor: grab;
     width: 8%;
     aspect-ratio: 212/214;
     position:absolute;
 }
 
-#diaper_sprite{
+#loop_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/diaper.svg);
+    background-image: url(img/loop.png);
     background-size: cover;
 }
 
-#gebis_container{
+#malerpalette_container{
+    cursor: grab;
     width: 7%;
     aspect-ratio: 230/192;
     position:absolute;
 }
 
-#gebis_sprite{
+#malerpalette_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/gebis.svg);
+    background-image: url(img/malerpalette.png);
     background-size: cover;
 }
 
-#panty_container{
+#vscode_container{
+    cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
 }
 
-#panty_sprite{
+#vscode_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/panty.svg);
+    background-image: url(img/vscode.png);
     background-size: cover;
 }
 
-#diaper_container{
+#github_container{
+    cursor: grab;
     width: 8%;
     aspect-ratio: 212/214;
     position:absolute;
 }
 
-#diaper_sprite{
+#github_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/diaper.svg);
+    background-image: url(img/github.png);
     background-size: cover;
 }
 
-#gebis_container{
+#pillow_container{
+    cursor: grab;
     width: 7%;
     aspect-ratio: 230/192;
     position:absolute;
 }
 
-#gebis_sprite{
+#pillow_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/gebis.svg);
+    background-image: url(img/pillow.png);
     background-size: cover;
 }
 
-#panty_container{
+#talebobler_container{
+    cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
 }
 
-#panty_sprite{
+#talebobler_sprite{
     width: 100%;
     height: 100%;
-    background-image: url(../img/panty.svg);
+    background-image: url(img/to-talebobler.png);
     background-size: cover;
 }
 
@@ -374,24 +389,37 @@ nav a{
 }
 
 
-/*-----------knap----------------*/
+/*---------------------------knapper------------------------*/
 #play_game1 {
     cursor: pointer;
     position: absolute;
-    width: 20%;
-    aspect-ratio: 35/20 ;
-    background-image: url("../img/startbutton.svg");
+    width: 7%;
+    aspect-ratio: 350/332 ;
+    background-image: url("img/check.png");
     background-size: cover;
-    left: 37%;
-    top: 68%;
+    left: 73%;
+    top: 60%;
+    z-index: 100;
+  }
+
+  #play_game2 {
+    cursor: pointer;
+    position: absolute;
+    width: 15%;
+    aspect-ratio: 1685/575 ;
+    background-image: url("img/letsgo-btn.png");
+    background-size: cover;
+    left: 66%;
+    top: 65%;
+    z-index: 100;
   }
 
   #play_again1 {
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
-    background-image: url("../img/try_again.svg");
+    aspect-ratio: 1146/393 ;
+    background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
     top: 67%;
@@ -401,19 +429,50 @@ nav a{
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
-    background-image: url("../img/try_again.svg");
+    aspect-ratio: 1146/393 ;
+    background-image: url("img/prøv-igen.png");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+  #play_again3 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 1146/393 ;
+    background-image: url("img/prøv-igen.png");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+  #play_again4 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 1146/393 ;
+    background-image: url("img/prøv-igen.png");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+  #play_again5 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 1146/393 ;
+    background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
     top: 67%;
   }
 
 
-
 /*---------- positioner -----------*/
   .pos1 {
-    top: 62.5%;
-    left: 7%;
+    top: 55%;
+    left: 66%;
   }
   .pos2 {
     top: 62.5%;
@@ -423,10 +482,7 @@ nav a{
     top: 39%;
     left: 31%;
   }
-  .pos4 {
-    top: 40%;
-    left: 54%;
-  }
+
 
 
 
@@ -435,33 +491,209 @@ nav a{
     animation-delay: 0s;
   }
   
-  .delay2 {
+.delay2 {
     animation-delay: 0.5s;
   }
   
-  .delay3 {
+.delay3 {
     animation-delay: 1s;
   }
   
-  .delay4 {
+.delay4 {
     animation-delay: 1.5s;
   }
 
 
-  /*------ morten-------*/
+  /*------ mortenener-------*/
 
-  #morten_container {
-    background-image: url(img/Build\ your\ own\ morten.png);
+  #morten1 {
+    background-image: url(img/thumbs-up-morten.png);
     background-size: cover;
-    aspect-ratio: 220/290;
+    aspect-ratio: 3198/2671;
     position: absolute;
-    top: 84%;
-    left: 92%;
-    width: 12%;
+    top: 76%;
+    left: 15%;
+    width: 32%;
     /* positioner bare elementet */
     transform: translate(-50%, -50%);
   }
 
+  #morten2 {
+    background-image: url(img/thumbs-up-morten.png);
+    background-size: cover;
+    aspect-ratio: 3198/2671;
+    position: absolute;
+    top: 76%;
+    left: 15%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  /*------------- talebobler*/
+
+  #talebobbel{
+    width: 55%;
+    aspect-ratio: 943/552;
+    position:absolute;
+    top: 23%;
+    left:30%;
+    background-image: url(img/talebobbel.png);
+    background-size: cover;
+}
+
+
+/*-------timer------------*/
+#timer-outline{
+    position: absolute;
+    width: 22px;
+    height: 19vw;
+    top: 15vw;
+    left: 93vw;
+    border: 2px solid rgb(68, 68, 68);
+    border-radius: 6px;
+}
+
+#timer-fill{
+    position: absolute;
+    width: 18px;
+    height: 18.6vw;
+    top: 15.3vw;
+    left: 93.3vw;
+    transform-origin: 50% 100%;
+    background-color: #7BBD59;
+    border-radius: 6px;
+}
+
+.shrink{
+    animation-name: shrink_time;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes shrink_time{
+    0% {
+        scale: 1 1;
+        background-color: #7BBD59 ;
+    }
+    50% {
+        background-color: #EED12B;
+    }
+    100% {
+        scale: 1 0;
+        background-color: #C64242;
+    }
+
+}
+
+
+/*-------------animationer-----------*/
+.hide{
+    display: none;
+}
+
+.bounce {
+    animation-name: item-bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.93, 0.2, 0.47, 1.04);
+  }
+
+  @keyframes item-bounce {
+    0% {
+      translate: 0 0%;
+    }
+    50% {
+      translate: 0 -95%;
+    }
+    100% {
+      translate: 0 0%;
+    }
+  }
+
+.pulse  {
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.rotation  {
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+.zoom  {
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom {
+  90% {
+    scale: 150%;
+    opacity: 100%;
+  }
+  100% {
+    scale: 150%;
+    opacity: 0%;
+  }
+}
+
+.disAppear {
+    animation-name: disAppear;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+
+@keyframes disAppear {
+    to {
+      scale: 0;
+      rotate: 3turn;
+    }
+  }
+  
+
+.gray {
+    filter: grayscale();
+    filter: drop-shadow();
+  }
+
+.frys {
+    animation-play-state: paused;
+  }
+
+.hide
+  {
+      display: none;
+  }
 
   /* STARTSIDE */
   #spiltitel {

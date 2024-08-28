@@ -56,19 +56,22 @@
     }
 }
 
-.zoom_in  {
-    animation-name: zoom_in;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+.zoom  {
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-
-@keyframes zoom_in {
-    from {
-        scale: 0.5;
-    }
-    to {
-        scale: 1 ;
-    }
+@keyframes zoom {
+  90% {
+    scale: 150%;
+    opacity: 100%;
+  }
+  100% {
+    scale: 150%;
+    opacity: 0%;
+  }
 }
 
 .disAppear {

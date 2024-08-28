@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Mortens Kyllinger</title>
-    <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/timer.css">
 </head>
 <body>
@@ -35,41 +35,17 @@
                     <div id="fail_container">
                         <div id="fail_sprite"></div>
                     </div>
-                    <div id="talebobbel_container">
-                        <div id="talebobbel_sprite"></div>
-                    </div>
                     <div id="loop_container">
                         <div id="loop_sprite"></div>
                     </div>
                     <div id="malerpalette_container">
                         <div id="malerpalette_sprite"></div>
                     </div>
-                    <div id="com_container">
-                        <div id="com_sprite"></div>
-                    </div>
                     <div id="github_container">
                         <div id="github_sprite"></div>
                     </div>
-                    <div id="globus_container">
-                        <div id="globus_sprite"></div>
-                    </div>
                     <div id="pillow_container">
                         <div id="pillow_sprite"></div>
-                    </div>
-                    <div id="tableandchair_container1">
-                        <div id="tableandchair_sprite1"></div>
-                    </div>
-                    <div id="tableandchair_container2">
-                        <div id="tableandchair_sprite2"></div>
-                    </div>
-                    <div id="tableandchair_container3">
-                        <div id="tableandchair_sprite3"></div>
-                    </div>
-                    <div id="talebobbel_container">
-                        <div id="talebobbel_sprite"></div>
-                    </div>
-                    <div id="taske_container">
-                        <div id="taske_sprite"></div>
                     </div>
                     <div id="talebobler_container">
                         <div id="talebobler_sprite"></div>
@@ -79,6 +55,20 @@
                     </div>
                     <div id="zipfil_container">
                         <div id="zipfil_sprite"></div>
+                    </div>
+                </div>
+                <div id="game_foreground">
+                    <div id="tableandchair_container1">
+                        <div id="tableandchair_sprite1"></div>
+                    </div>
+                    <div id="tableandchair_container2">
+                        <div id="tableandchair_sprite2"></div>
+                    </div>
+                    <div id="tableandchair_container3">
+                        <div id="tableandchair_sprite3"></div>
+                    </div>
+                    <div id="morten_container">
+                        <div id="morten_sprite"></div>
                     </div>
                     <div id="bird1_container">
                         <div id="bird1_sprite"></div>
@@ -98,64 +88,43 @@
                     <div id="bird6_container">
                         <div id="bird6_sprite"></div>
                     </div>
-                    <div id="bird-end1_container">
-                        <div id="bird-end1_sprite"></div>
-                    </div>
-                    <div id="bird-end2_container1">
-                        <div id="bird-end2_sprite"></div>
-                    </div>
-                    <div id="bird-end3_container">
-                        <div id="bird-end3_sprite"></div>
-                    </div>
-                    <div id="bird-end4_container1">
-                        <div id="bird-end4_sprite"></div>
-                    </div>
-                    <div id="bird-end5_container">
-                        <div id="bird-end5_sprite"></div>
-                    </div>
-                    <div id="bird-end6_container">
-                        <div id="bird-end6_sprite"></div>
-                    </div>
-                    <div id="morten_container">
-                        <div id="morten_sprite"></div>
-                    </div>
-                    <div id="thumbs-up_container">
-                        <div id="thumbs-up_sprite"></div>
-                    </div>
-                    <div id="peace_container">
-                        <div id="peace_sprite"></div>
-                    </div>
-                    <div id="hello-hand_container">
-                        <div id="hello-hand_sprite"></div>
-                    </div>
-                </div>
-                <div id="game_foreground">
-                    <div id="morten_container"></div>
                 </div>
                 <div id="game_ui">
                     <div id="time_container">
-                        <div id="timer_outline"></div>
-                        <div id="timer_fill" class="timer"></div>
+                        <div id="timer-outline"></div>
+                        <div id="timer-fill" class="shrink"></div>
                     </div>
                 </div>   
             </div>
-            <div id="start" class="hide">
-                <div id="play_game"></div>
+            <div id="title_screen" class="hide">
+                <div id="play_game1"></div>
+                <div id="talebobbel"></div>
+                <div id="morten1"></div>
             </div>
+            <div id="instructions" class="hide">
+                <div id="play_game2"></div>
+                <div id="talebobbel"></div>
+                <div id="morten2"></div>
+              </div>
             <div id="level_complete1" class="hide">
-                <div id="play_again"></div>
+                <div id="play_again1"></div>
+                <div id="morten3"></div>
             </div>
             <div id="level_complete2" class="hide">
-                <div id="play_again"></div>
+                <div id="play_again2"></div>
+                <div id="morten4"></div>
             </div>
             <div id="level_complete3" class="hide">
-                <div id="play_again"></div>
+                <div id="play_again3"></div>
+                <div id="morten5"></div>
             </div>
             <div id="level_complete4" class="hide">
-                <div id="play_again"></div>
+                <div id="play_again4"></div>
+                <div id="morten6"></div>
             </div>
             <div id="level_complete5" class="hide">
-                <div id="play_again"></div>
+                <div id="play_again5"></div>
+                <div id="morten7"></div>
             </div>
         </div>
 
@@ -165,13 +134,13 @@
     <audio src="audio/3.m4a" id="glem-ikke-hyggen"></audio>
     <audio src="audio/4.m4a" id="velkommen"></audio>
     <audio src="audio/5.m4a" id="karakter"></audio>
-    <audio src="audio/6.m4a" id="fang-kompetencer"></audio>
+    <audio src="audio/kompetencer-retter.m4a" id="fang-kompetencer"></audio>
     <audio src="audio/10.m4a" id="hype-up"></audio>
     <audio src="audio/7.m4a" id="joe"></audio>
     <audio src="audio/8.m4a" id="kodning"></audio>
     <audio src="audio/9.m4a" id="content"></audio>
     <audio src="audio/11.m4a" id="selvstændig"></audio>
-    <audio src="audio/background_audio.wav" id="god_lyd2"></audio>
+    <audio src="audio/background_audio.wav" id="baggrunds-lyd"></audio>
     <script src="js/spil.js"></script>
 
 </body>
