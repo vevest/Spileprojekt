@@ -136,12 +136,12 @@ nav a{
   /* ----------- spil - elementer---------------*/
 
 
-/* #tableandchair_container1{
-    width: 25%;
+#tableandchair_container1{
+    width: 23%;
     aspect-ratio: 650/685;
     position:absolute;
-    top: 50%;
-    left:7%;
+    top: 51%;
+    left:10%;
 }
 
 #tableandchair_sprite1{
@@ -149,14 +149,14 @@ nav a{
     height: 100%;
     background-image: url(img/tableandchair.png);
     background-size: cover;
-} */
+}
 
 #tableandchair_container2{
     width: 25%;
     aspect-ratio: 650/685;
     position:absolute;
-    top: 50%;
-    left: 27%;
+    top: 57.5%;
+    left: 34%;
 }
 
 #tableandchair_sprite2{
@@ -167,11 +167,11 @@ nav a{
 }
 
 #tableandchair_container3{
-    width: 25%;
+    width: 23%;
     aspect-ratio: 650/685;
     position:absolute;
-    top: 50%;
-    left: 52%;
+    top: 51%;
+    left: 60%;
 }
 
 #tableandchair_sprite3{
@@ -181,35 +181,6 @@ nav a{
     background-size: cover;
 }
 
-#globus_container{
-    width: 22%;
-    aspect-ratio: 650/631;
-    position:absolute;
-    top: 64%;
-    left: 5%;
-}
-
-#globus_sprite{
-    width: 100%;
-    height: 100%;
-    background-image: url(img/globus.png);
-    background-size: cover;
-}
-
-#taske_container{
-    width: 20%;
-    aspect-ratio: 650/635;
-    position:absolute;
-    top: 68%;
-    left: 83%;
-}
-
-#taske_sprite{
-    width: 100%;
-    height: 100%;
-    background-image: url(img/taske.png);
-    background-size: cover;
-}
 
 /* -----------------klikbarer elementer ----------*/
 
