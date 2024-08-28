@@ -2,11 +2,8 @@ window.addEventListener("load", titleScreen);
 window.addEventListener("resize", windowResize);
 console.log("dit javaScript virker");
 
-let points1;
-let points2;
-let points3;
-let points4;
-let points5;
+let points;
+
 let rndposition;
 // rndposition = generateRandomPosition(3);
 let rnddelay;
@@ -18,14 +15,22 @@ function titleScreen() {
   windowResize();
   hideAllScreens();
 
-  document.querySelector("#title_screen").classList.remove("hide");
-  document.querySelector("#play_game1").classList.add("pulse");
-  document.querySelector("#play_game1").addEventListener("click", showInstructions);
-
-  document.querySelector("#velkommen").volume = 1;
-  document.querySelector("#velkommen").play();
+  document.querySelector("#mortenskyllinger_screen").classList.remove("hide");
+  document.querySelector("#play_game").classList.add("pulse");
+    document.querySelector("#play_game").addEventListener("click", getInstructions);
 
 }
+
+function getInstructions() {
+    console.log("getInstructions");
+    hideAllScreens();
+    document.querySelector("#title_screen").classList.remove("hide");
+    document.querySelector("#play_game1").classList.add("pulse");
+    document.querySelector("#play_game1").addEventListener("click", showInstructions);
+
+    document.querySelector("#velkommen").volume = 1;
+    document.querySelector("#velkommen").play();
+  }
 
 function showInstructions() {
   console.log("showInstructions");
@@ -49,7 +54,7 @@ function startSpil() {
  
   console.log("funktionen startSpil");
 
-  document.querySelector("#baggrunds-lyd").volume = 0.2;
+  document.querySelector("#baggrunds-lyd").volume = 0.1;
   document.querySelector("#baggrunds-lyd").play();
 
   //------------------------------- Timer animation
@@ -74,55 +79,79 @@ function startSpil() {
   document.querySelector("#beer_container").classList.add("delay" + rnddelay);
   document.querySelector("#beer_container").classList.add("bounce");
 
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#figma_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#figma_container").classList.add("delay" + rnddelay);
+  document.querySelector("#figma_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#diagram_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#diagram_container").classList.add("delay" + rnddelay);
+  document.querySelector("#diagram_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#zip_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#zip_container").classList.add("delay" + rnddelay);
+  document.querySelector("#zip_container").classList.add("bounce");
+
   
 
 
   //Lytter efter om op_ned-animationen har kørt 1 gang
   document.querySelector("#adobe_container").addEventListener("animationiteration", resetAdobe);
   document.querySelector("#beer_container").addEventListener("animationiteration", resetBeer);
+  document.querySelector("#figma_container").addEventListener("animationiteration", resetFigma);
+  document.querySelector("#diagram_container").addEventListener("animationiteration", resetDiagram);
+  document.querySelector("#zip_container").addEventListener("animationiteration", resetZip);
   
 
   // Adding eventlisteners to objects
   document.querySelector("#adobe_container").addEventListener("mousedown", clickAdobe);
   document.querySelector("#beer_container").addEventListener("mousedown", clickBeer);
+  document.querySelector("#figma_container").addEventListener("mousedown", clickFigma);
+  document.querySelector("#diagram_container").addEventListener("mousedown", clickDiagram);
+  document.querySelector("#zip_container").addEventListener("mousedown", clickZip);
 }
 
 // ---------------------------- Adobe ----------------------------
 function clickAdobe() {
-  console.log("funktionen clickAdobe");
-
-  document.querySelector("#adobe_container").removeEventListener("mousedown", clickAdobe);
-
-  document.querySelector("#adobe_container").classList.add("frys");
-  document.querySelector("#adobe_sprite").classList.add("zoom");
+    console.log("funktionen clickAdobe");
+    document.querySelector("#adobe_container").removeEventListener("mousedown", clickAdobe);
+    document.querySelector("#adobe_container").classList.add("frys");
+    document.querySelector("#adobe_sprite").classList.add("zoom");
+    
     document.querySelector("#sådan").play();
-
-  document.querySelector("#adobe_container").addEventListener("animationend", resetAdobe);
-
-  addPoints1();
+  
+    document.querySelector("#adobe_container").addEventListener("animationend", resetAdobe);
+  
+    addPoints1();
  
 }
 
 function resetAdobe() {
-  console.log("funktion resetAdobe");
-  // den opfatter når aniamtionerne fra "click" er færdige
-  document.querySelector("#adobe_container").removeEventListener("animationend", resetAdobe);
-
-  // fjerner alle klasser fra container og sprite
-  document.querySelector("#adobe_container").classList = "";
-  document.querySelector("#adobe_sprite").classList = "";
-
-  // giver browser en tænkepause inden den nye animation
-  document.querySelector("#adobe_sprite").offsetLeft;
-
-  // giver container flyveanimationen og en ny position
-  document.querySelector("#adobe_container").classList.add("bounce");
-
-  rndposition = generateRandomPosition(3);
-  document.querySelector("#adobe_container").classList.add("pos" + rndposition);
-
-  document.querySelector("#adobe_container").addEventListener("mousedown", clickAdobe);
-}
+    console.log("funktion resetAdobe");
+    // den opfatter når animationerne fra "click" er færdige
+    document.querySelector("#adobe_container").removeEventListener("animationend", resetAdobe);
+  
+    // fjerner alle klasser fra container
+    document.querySelector("#adobe_container").classList = "";
+    // fjerner alle klasser fra sprite
+    document.querySelector("#adobe_sprite").classList = "";
+  
+    // giver browser en tænkepause inden den nye animation
+    document.querySelector("#adobe_sprite").offsetLeft;
+  
+    // giver container flyveanimationen og en ny position
+    document.querySelector("#adobe_container").classList.add("bounce");
+  
+    rndposition = generateRandomPosition(3);
+    document.querySelector("#adobe_container").classList.add("pos" + rndposition);
+  
+    document.querySelector("#adobe_container").addEventListener("mousedown", clickAdobe);
+  }
 
 // ---------------------------- Beer ----------------------------
 function clickBeer() {
@@ -135,7 +164,7 @@ function clickBeer() {
 
   document.querySelector("#beer_container").addEventListener("animationend", resetBeer);
 
-  addPoints5();
+  addPoints4();
 
 }
 
@@ -161,6 +190,119 @@ function resetBeer() {
   document.querySelector("#beer_container").addEventListener("mousedown", clickBeer);
 }
 
+// ---------------------------- Figma ----------------------------
+function clickFigma() {
+    console.log("funktionen clickFigma");
+    document.querySelector("#figma_container").removeEventListener("mousedown", clickFigma);
+    document.querySelector("#figma_container").classList.add("frys");
+    document.querySelector("#figma_sprite").classList.add("zoom");
+    
+    document.querySelector("#hype").play();
+  
+    document.querySelector("#figma_container").addEventListener("animationend", resetFigma);
+  
+    addPoints1();
+  
+  }
+  
+  function resetFigma() {
+    console.log("funktion resetFigma");
+    // den opfatter når animationerne fra "click" er færdige
+    document.querySelector("#figma_container").removeEventListener("animationend", resetFigma);
+  
+    // fjerner alle klasser fra container
+    document.querySelector("#figma_container").classList = "";
+    // fjerner alle klasser fra sprite
+    document.querySelector("#figma_sprite").classList = "";
+  
+    // giver browser en tænkepause inden den nye animation
+    document.querySelector("#figma_sprite").offsetLeft;
+  
+    // giver container flyveanimationen og en ny position
+    document.querySelector("#figma_container").classList.add("bounce");
+  
+    rndposition = generateRandomPosition(3);
+    document.querySelector("#figma_container").classList.add("pos" + rndposition);
+  
+    document.querySelector("#figma_container").addEventListener("mousedown", clickFigma);
+  }
+  
+
+  // ---------------------------- Diagram ----------------------------
+function clickDiagram() {
+    console.log("funktionen clickDiagram");
+    document.querySelector("#diagram_container").removeEventListener("mousedown", clickDiagram);
+    document.querySelector("#diagram_container").classList.add("frys");
+    document.querySelector("#diagram_sprite").classList.add("zoom");
+    
+    document.querySelector("#fedt").play();
+  
+    document.querySelector("#diagram_container").addEventListener("animationend", resetDiagram);
+  
+    addPoints3();
+  
+  }
+  
+  function resetDiagram() {
+    console.log("funktion resetDiagram");
+    // den opfatter når animationerne fra "click" er færdige
+    document.querySelector("#diagram_container").removeEventListener("animationend", resetDiagram);
+  
+    // fjerner alle klasser fra container
+    document.querySelector("#diagram_container").classList = "";
+    // fjerner alle klasser fra sprite
+    document.querySelector("#diagram_sprite").classList = "";
+  
+    // giver browser en tænkepause inden den nye animation
+    document.querySelector("#diagram_sprite").offsetLeft;
+  
+    // giver container flyveanimationen og en ny position
+    document.querySelector("#diagram_container").classList.add("bounce");
+  
+    rndposition = generateRandomPosition(3);
+    document.querySelector("#diagram_container").classList.add("pos" + rndposition);
+  
+    document.querySelector("#diagram_container").addEventListener("mousedown", clickDiagram);
+  }
+  
+
+  // ---------------------------- Zip ----------------------------
+function clickZip() {
+    console.log("funktionen clickZip");
+    document.querySelector("#zip_container").removeEventListener("mousedown", clickZip);
+    document.querySelector("#zip_container").classList.add("frys");
+    document.querySelector("#zip_sprite").classList.add("zoom");
+    
+    document.querySelector("#sådan").play();
+  
+    document.querySelector("#zip_container").addEventListener("animationend", resetZip);
+  
+    addPoints2();
+  
+  }
+  
+  function resetZip() {
+    console.log("funktion resetZip");
+    // den opfatter når animationerne fra "click" er færdige
+    document.querySelector("#zip_container").removeEventListener("animationend", resetZip);
+  
+    // fjerner alle klasser fra container
+    document.querySelector("#zip_container").classList = "";
+    // fjerner alle klasser fra sprite
+    document.querySelector("#zip_sprite").classList = "";
+  
+    // giver browser en tænkepause inden den nye animation
+    document.querySelector("#zip_sprite").offsetLeft;
+  
+    // giver container flyveanimationen og en ny position
+    document.querySelector("#zip_container").classList.add("bounce");
+  
+    rndposition = generateRandomPosition(3);
+    document.querySelector("#zip_container").classList.add("pos" + rndposition);
+  
+    document.querySelector("#zip_container").addEventListener("mousedown", clickZip);
+  }
+  
 
 
 // ------------------------------ Stop Spillet ------------------------------
@@ -178,17 +320,29 @@ function stopSpillet() {
   // fjerner alle klasser fra container
   document.querySelector("#adobe_container").classList = "";
   document.querySelector("#beer_container").classList = "";
+  document.querySelector("#figma_container").classList = "";
+  document.querySelector("#diagram_container").classList = "";
+  document.querySelector("#zip_container").classList = "";
 
   // fjerner alle klasser fra sprite
   document.querySelector("#adobe_sprite").classList = "";
   document.querySelector("#beer_sprite").classList = "";
+  document.querySelector("#figma_sprite").classList = "";
+  document.querySelector("#diagram_sprite").classList = "";
+  document.querySelector("#zip_sprite").classList = "";
 
   // fjerner alle eventListeners
   document.querySelector("#adobe_sprite").removeEventListener("mousedown", clickAdobe);
   document.querySelector("#beer_sprite").removeEventListener("mousedown", clickBeer);
+  document.querySelector("#figma_sprite").removeEventListener("mousedown", clickFigma);
+  document.querySelector("#diagram_sprite").removeEventListener("mousedown", clickDiagram);
+  document.querySelector("#zip_sprite").removeEventListener("mousedown", clickZip);
   
-  document.querySelector("#adobe_container").removeEventListener("animationend", addOnePoint);
-  document.querySelector("#beer_container").removeEventListener("animationend", addOnePoint);
+  document.querySelector("#adobe_container").removeEventListener("animationend", addPoints1);
+  document.querySelector("#beer_container").removeEventListener("animationend", addPoints4);
+  document.querySelector("#figma_container").removeEventListener("animationend", addPoints1);
+  document.querySelector("#diagram_container").removeEventListener("animationend", addPoints3);
+  document.querySelector("#zip_container").removeEventListener("animationend", addPoints2);
   
 
   if (points1 > 4) {
@@ -260,11 +414,6 @@ function addPoints4() {
   }
 
 
-function addPoints5() {
-    points = points + 1;
-  }
-
-
 
 // -------------------------------- Position --------------------------------
 function generateRandomPosition(max) {
@@ -284,6 +433,7 @@ function hideAllScreens() {
   document.querySelector("#level_complete5").classList.add("hide");
   document.querySelector("#title_screen").classList.add("hide");
   document.querySelector("#instructions").classList.add("hide");
+  document.querySelector("#mortenskyllinger_screen").classList.add("hide");
 }
 
 function windowResize() {

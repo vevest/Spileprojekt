@@ -215,7 +215,7 @@ nav a{
 
 #figma_container{
     cursor: grab;
-    width: 8%;
+    width: 14%;
     aspect-ratio: 212/214;
     position:absolute;
 }
@@ -229,7 +229,7 @@ nav a{
 
 #fail_container{
     cursor: grab;
-    width: 7%;
+    width: 10%;
     aspect-ratio: 230/192;
     position:absolute;
 }
@@ -241,14 +241,14 @@ nav a{
     background-size: cover;
 }
 
-#zipfil_container{
+#zip_container{
     cursor: grab;
-    width: 12%;
-    aspect-ratio: 1.5/1;
+    width: 10%;
+    aspect-ratio: 431/439;
     position:absolute;
 }
 
-#zipfil_sprite{
+#zip_sprite{
     width: 100%;
     height: 100%;
     background-image: url(img/zipfil.png);
@@ -257,7 +257,7 @@ nav a{
 
 #adobe_container{
     cursor: grab;
-    width: 10%;
+    width: 11%;
     aspect-ratio: 431/439;
     position:absolute;
 }
@@ -271,7 +271,7 @@ nav a{
 
 #beer_container{
     cursor: grab;
-    width: 10%;
+    width: 11%;
     aspect-ratio: 431/439;
     position:absolute;
 }
@@ -285,7 +285,7 @@ nav a{
 
 #diagram_container{
     cursor: grab;
-    width: 9%;
+    width: 10%;
     aspect-ratio: 431/439;
     position:absolute;
 }
@@ -299,7 +299,7 @@ nav a{
 
 #loop_container{
     cursor: grab;
-    width: 8%;
+    width: 10%;
     aspect-ratio: 212/214;
     position:absolute;
 }
@@ -313,7 +313,7 @@ nav a{
 
 #malerpalette_container{
     cursor: grab;
-    width: 7%;
+    width: 10%;
     aspect-ratio: 230/192;
     position:absolute;
 }
@@ -341,7 +341,7 @@ nav a{
 
 #github_container{
     cursor: grab;
-    width: 8%;
+    width: 10%;
     aspect-ratio: 212/214;
     position:absolute;
 }
@@ -355,7 +355,7 @@ nav a{
 
 #pillow_container{
     cursor: grab;
-    width: 7%;
+    width: 10%;
     aspect-ratio: 230/192;
     position:absolute;
 }
@@ -405,6 +405,19 @@ nav a{
 
 
 /*---------------------------knapper------------------------*/
+#play_game {
+    cursor: pointer;
+    position: absolute;
+    width: 22%;
+    aspect-ratio: 1348/499 ;
+    background-image: url("img/start-btn.png");
+    background-size: cover;
+    left: 75%;
+    top: 82%;
+    z-index: 100;
+  }
+
+
 #play_game1 {
     cursor: pointer;
     position: absolute;
@@ -413,7 +426,7 @@ nav a{
     background-image: url("img/check.png");
     background-size: cover;
     left: 73%;
-    top: 60%;
+    top: 62%;
     z-index: 100;
   }
 
@@ -424,8 +437,8 @@ nav a{
     aspect-ratio: 1685/575 ;
     background-image: url("img/letsgo-btn.png");
     background-size: cover;
-    left: 66%;
-    top: 65%;
+    left: 52%;
+    top: 64%;
     z-index: 100;
   }
 
@@ -487,15 +500,15 @@ nav a{
 /*---------- positioner -----------*/
   .pos1 {
     top: 55%;
-    left: 66%;
+    left:16%;
   }
   .pos2 {
-    top: 62.5%;
-    left: 76%;
+    top: 61.5%;
+    left: 40%;
   }
   .pos3 {
-    top: 39%;
-    left: 31%;
+    top: 55%;
+    left: 66%;
   }
 
 
@@ -507,15 +520,15 @@ nav a{
   }
   
 .delay2 {
-    animation-delay: 0.5s;
+    animation-delay: 3s;
   }
   
 .delay3 {
-    animation-delay: 1s;
+    animation-delay: 6s;
   }
   
 .delay4 {
-    animation-delay: 1.5s;
+    animation-delay: 7s;
   }
 
 
@@ -582,7 +595,7 @@ nav a{
 
 .shrink{
     animation-name: shrink_time;
-    animation-duration: 10s;
+    animation-duration: 60s;
     animation-iteration-count: 1;
     animation-timing-function:linear;
     animation-fill-mode:forwards;
