@@ -1,9 +1,7 @@
 @font-face {
     font-family: "chelsea";
-    src: url(//fonts/Chelsea_Market.zip);
+    src: url(/fonts/ChelseaMarket-Regular.ttf);
   }
-
-
 
 main, header, footer{
     max-width: 1400px;
@@ -39,6 +37,16 @@ nav a{
     height: 100%;
 }
 
+#mortenskyllinger_screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(img/startscreen-medkyllinger.png);
+  background-size: cover;
+}
+
 #title_screen {
     width: 100%;
     height: 100%;
@@ -47,6 +55,13 @@ nav a{
     left: 0;
     background-image: url(img/startscreen.png);
     background-size: cover;
+  }
+
+  .instructions {
+    font-family: "chelsea";
+    font-size: 24px;
+    padding: 20px;
+    margin-left: 10%;
   }
 
 #level_complete1 {

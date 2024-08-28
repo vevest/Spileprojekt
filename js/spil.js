@@ -17,14 +17,13 @@ function titleScreen() {
   console.log("vis titel skærm");
   windowResize();
   hideAllScreens();
-  document.querySelector("#velkommen").volume = 1;
-  document.querySelector("#velkommen").play();
 
   document.querySelector("#title_screen").classList.remove("hide");
   document.querySelector("#play_game1").classList.add("pulse");
   document.querySelector("#play_game1").addEventListener("click", showInstructions);
 
-  
+  document.querySelector("#velkommen").volume = 1;
+  document.querySelector("#velkommen").play();
 
 }
 
@@ -70,7 +69,7 @@ function startSpil() {
   document.querySelector("#adobe_container").classList.add("bounce");
 
   rndposition = generateRandomPosition(3);
-  document.querySelector("beer_container").classList = "pos" + rndposition;
+  document.querySelector("#beer_container").classList = "pos" + rndposition;
   rnddelay = generateRandomDelay(4);
   document.querySelector("#beer_container").classList.add("delay" + rnddelay);
   document.querySelector("#beer_container").classList.add("bounce");
@@ -142,7 +141,7 @@ function clickBeer() {
 
 function resetBeer() {
   console.log("funktion resetBeer");
-  // den opfatter når aniamtionerne fra "click" er færdige
+  // den opfatter når animationerne fra "click" er færdige
   document.querySelector("#beer_container").removeEventListener("animationend", resetBeer);
 
   // fjerner alle klasser fra container
