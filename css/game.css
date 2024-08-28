@@ -110,7 +110,7 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(assets/instructions.svg);
+    background-image: url(img/gamescreen.png);
     background-color: white;
     background-size: cover;
   }
@@ -338,7 +338,7 @@ nav a{
     background-size: cover;
 }
 
-#talebobler_container{
+#talebobler{
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
@@ -374,27 +374,29 @@ nav a{
 }
 
 
-/*-----------knap----------------*/
+/*---------------------------knapper------------------------*/
 #play_game1 {
     cursor: pointer;
     position: absolute;
-    width: 20%;
-    aspect-ratio: 35/20 ;
-    background-image: url("img/start-btn.png");
+    width: 7%;
+    aspect-ratio: 350/332 ;
+    background-image: url("img/check.png");
     background-size: cover;
-    left: 37%;
-    top: 68%;
+    left: 73%;
+    top: 60%;
+    z-index: 100;
   }
 
   #play_game2 {
     cursor: pointer;
     position: absolute;
-    width: 20%;
-    aspect-ratio: 35/20 ;
+    width: 15%;
+    aspect-ratio: 1685/575 ;
     background-image: url("img/letsgo-btn.png");
     background-size: cover;
-    left: 37%;
-    top: 68%;
+    left: 66%;
+    top: 65%;
+    z-index: 100;
   }
 
   #play_again1 {
@@ -490,17 +492,41 @@ nav a{
   }
 
 
-  /*------ morten-------*/
+  /*------ mortenener-------*/
 
-  #morten_container {
-    background-image: url(img/Build\ your\ own\ morten.png);
+  #morten1 {
+    background-image: url(img/thumbs-up-morten.png);
     background-size: cover;
-    aspect-ratio: 220/290;
+    aspect-ratio: 3198/2671;
     position: absolute;
-    top: 84%;
-    left: 92%;
-    width: 12%;
+    top: 76%;
+    left: 15%;
+    width: 32%;
     /* positioner bare elementet */
     transform: translate(-50%, -50%);
   }
+
+  #morten2 {
+    background-image: url(img/thumbs-up-morten.png);
+    background-size: cover;
+    aspect-ratio: 3198/2671;
+    position: absolute;
+    top: 76%;
+    left: 15%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  /*------------- talebobler*/
+
+  #talebobbel{
+    width: 55%;
+    aspect-ratio: 943/552;
+    position:absolute;
+    top: 23%;
+    left:30%;
+    background-image: url(img/talebobbel.png);
+    background-size: cover;
+}
 
