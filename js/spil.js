@@ -43,77 +43,82 @@ function startSpil() {
   document.querySelector("#baggrunds_lyd").volume = 0.5;
   document.querySelector("#baggrunds_lyd").play();
 
+  //------------------------------- Timer animation
   //Starter timer-animationen på masken
   document.querySelector("#timer-fill").classList.add("shrink");
 
   // når timeranimationen er færdig kaldes funktionen stopSpillet()
   document.querySelector("#timer-fill").addEventListener("animationend", stopSpillet);
 
-  // Adding classes to containers
-  rndposition = generateRandomPosition(6);
-  document.querySelector("#white_dandelion_container").classList = "pos" + rndposition;
-  rnddelay = generateRandomDelay(4);
-  document.querySelector("#white_dandelion_container").classList.add("delay" + rnddelay);
-  document.querySelector("#white_dandelion_container").classList.add("hop");
 
-  rndposition = generateRandomPosition(6);
+
+  // ---------------------------- Adding classes to containers
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#adobe_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#adobe_container").classList.add("delay" + rnddelay);
+  document.querySelector("#adobe_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
   document.querySelector("#sprout_container").classList = "pos" + rndposition;
   rnddelay = generateRandomDelay(4);
   document.querySelector("#sprout_container").classList.add("delay" + rnddelay);
   document.querySelector("#sprout_container").classList.add("hop");
 
-  rndposition = generateRandomPosition(6);
+  rndposition = generateRandomPosition(3);
   document.querySelector("#yellow_dandelion_container").classList = "pos" + rndposition;
   rnddelay = generateRandomDelay(4);
   document.querySelector("#yellow_dandelion_container").classList.add("delay" + rnddelay);
   document.querySelector("#yellow_dandelion_container").classList.add("hop");
 
   //Lytter efter om op_ned-animationen har kørt 1 gang
-  document.querySelector("#white_dandelion_container").addEventListener("animationiteration", resetWhiteDandelion);
+  document.querySelector("#adobe_container").addEventListener("animationiteration", resetWhiteDandelion);
   document.querySelector("#yellow_dandelion_container").addEventListener("animationiteration", resetYellowDandelion);
   document.querySelector("#sprout_container").addEventListener("animationiteration", resetSprout);
 
   // Adding eventlisteners to objects
-  document.querySelector("#white_dandelion_container").addEventListener("mousedown", clickWhiteDandelion);
+  document.querySelector("#adobe_container").addEventListener("mousedown", clickWhiteDandelion);
   document.querySelector("#sprout_container").addEventListener("mousedown", clickSprout);
   document.querySelector("#yellow_dandelion_container").addEventListener("mousedown", clickYellowDandelion);
 }
 
-// ---------------------------- White Dandelion ----------------------------
-function clickWhiteDandelion() {
-  console.log("funktionen clickWhiteDandelion");
+// ---------------------------- Adobe ----------------------------
+function clickAdobe() {
+  console.log("funktionen clickAdobe");
 
-  document.querySelector("#white_dandelion_container").removeEventListener("mousedown", clickWhiteDandelion);
+  document.querySelector("#adobe_container").removeEventListener("mousedown", clickAdobe);
 
-  document.querySelector("#white_dandelion_container").classList.add("frys");
-  document.querySelector("#white_dandelion_sprite").classList.add("pop");
-  document.querySelector("#god_lyd1").play();
+  document.querySelector("#adobe_container").classList.add("frys");
+  document.querySelector("#adobe_sprite").classList.add("zoom_in");
+  
+  document.querySelector("#sådan").volume = 1.5;
+  document.querySelector("#sådan").play();
 
-  document.querySelector("#white_dandelion_container").addEventListener("animationend", resetWhiteDandelion);
+  document.querySelector("#adobe_container").addEventListener("animationend", resetAdobe);
 
   addTwoPoints();
   printPoints();
 }
 
-function resetWhiteDandelion() {
-  console.log("funktion resetWhiteDandelion");
+function resetAdobe() {
+  console.log("funktion resetAdobe");
   // den opfatter når aniamtionerne fra "click" er færdige
-  document.querySelector("#white_dandelion_container").removeEventListener("animationend", resetWhiteDandelion);
+  document.querySelector("#adobe_container").removeEventListener("animationend", resetAdobe);
 
   // fjerner alle klasser fra container og sprite
-  document.querySelector("#white_dandelion_container").classList = "";
-  document.querySelector("#white_dandelion_sprite").classList = "";
+  document.querySelector("#adobe_container").classList = "";
+  document.querySelector("#adobe_sprite").classList = "";
 
   // giver browser en tænkepause inden den nye animation
-  document.querySelector("#white_dandelion_sprite").offsetLeft;
+  document.querySelector("#adobe_sprite").offsetLeft;
 
   // giver container flyveanimationen og en ny position
-  document.querySelector("#white_dandelion_container").classList.add("hop");
+  document.querySelector("#adobe_container").classList.add("bounce");
 
   rndposition = generateRandomPosition(6);
-  document.querySelector("#white_dandelion_container").classList.add("pos" + rndposition);
+  document.querySelector("#adobe_container").classList.add("pos" + rndposition);
 
-  document.querySelector("#white_dandelion_container").addEventListener("mousedown", clickWhiteDandelion);
+  document.querySelector("#adobe_container").addEventListener("mousedown", clickAdobe);
 }
 
 // ---------------------------- Yellow Dandelion ----------------------------
@@ -275,8 +280,11 @@ function generateRandomDelay(max) {
 
 function hideAllScreens() {
   console.log("hideAllScreens");
-  document.querySelector("#game_over").classList.add("hide");
-  document.querySelector("#level_complete").classList.add("hide");
+  document.querySelector("#level_complete1").classList.add("hide");
+  document.querySelector("#level_complete2").classList.add("hide");
+  document.querySelector("#level_complete3").classList.add("hide");
+  document.querySelector("#level_complete4").classList.add("hide");
+  document.querySelector("#level_complete5").classList.add("hide");
   document.querySelector("#title_screen").classList.add("hide");
   document.querySelector("#instructions").classList.add("hide");
 }
@@ -284,11 +292,11 @@ function hideAllScreens() {
 function windowResize() {
   let widthScreen = document.querySelector("#screen").clientWidth;
 
-  let myFontInProcent1 = 5;
-  let myFont1 = (widthScreen / 100) * myFontInProcent1;
-  document.querySelector("#lives").style.fontSize = myFont1 + "px";
+//   let myFontInProcent1 = 5;
+//   let myFont1 = (widthScreen / 100) * myFontInProcent1;
+//   document.querySelector("#lives").style.fontSize = myFont1 + "px";
 
-  let myFontInProcent2 = 5;
-  let myFont2 = (widthScreen / 100) * myFontInProcent2;
-  document.querySelector("#points").style.fontSize = myFont2 + "px";
+//   let myFontInProcent2 = 5;
+//   let myFont2 = (widthScreen / 100) * myFontInProcent2;
+//   document.querySelector("#points").style.fontSize = myFont2 + "px";
 }

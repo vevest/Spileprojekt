@@ -356,7 +356,7 @@ nav a{
 
 /*--------------------- point og liv-----------------*/
 
-/* #points,
+#points,
 #lives {
   font-family: Georgia, serif;
   margin: 0;
@@ -371,7 +371,7 @@ nav a{
 #points {
   left: 38.5%;
   top: 80%;
-} */
+}
 
 
 /*-----------knap----------------*/
@@ -454,8 +454,8 @@ nav a{
 
 /*---------- positioner -----------*/
   .pos1 {
-    top: 62.5%;
-    left: 7%;
+    top: 51%;
+    left: 60%;
   }
   .pos2 {
     top: 62.5%;
