@@ -131,7 +131,7 @@ function clickBeer() {
   document.querySelector("#beer_container").classList.add("frys");
   document.querySelector("#beer_sprite").classList.add("zoom");
   
-  document.querySelector("#fedt").play();
+  document.querySelector("#glem-ikke-hyggen").play();
 
   document.querySelector("#beer_container").addEventListener("animationend", resetBeer);
 
