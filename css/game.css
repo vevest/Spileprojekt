@@ -375,12 +375,12 @@ nav a{
 
 
 /*-----------knap----------------*/
-#play_game1 {
+#play_game {
     cursor: pointer;
     position: absolute;
     width: 20%;
     aspect-ratio: 35/20 ;
-    background-image: url("../img/startbutton.svg");
+    background-image: url("img/letsgo-btn.png");
     background-size: cover;
     left: 37%;
     top: 68%;
@@ -391,7 +391,7 @@ nav a{
     position: absolute;
     width: 23%;
     aspect-ratio: 530/150 ;
-    background-image: url("../img/try_again.svg");
+    background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
     top: 67%;
@@ -402,12 +402,43 @@ nav a{
     position: absolute;
     width: 23%;
     aspect-ratio: 530/150 ;
-    background-image: url("../img/try_again.svg");
+    background-image: url("img/prøv-igen.png");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+  #play_again3 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
     top: 67%;
   }
 
+  #play_again4 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("img/prøv-igen.png");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
+
+  #play_again5 {
+    cursor: pointer;
+    position: absolute;
+    width: 23%;
+    aspect-ratio: 530/150 ;
+    background-image: url("img/prøv-igen.png");
+    background-size: cover;
+    left: 38%;
+    top: 67%;
+  }
 
 
 /*---------- positioner -----------*/
