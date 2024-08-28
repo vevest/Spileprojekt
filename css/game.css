@@ -375,7 +375,18 @@ nav a{
 
 
 /*-----------knap----------------*/
-#play_game {
+#play_game1 {
+    cursor: pointer;
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 35/20 ;
+    background-image: url("img/start-btn.png");
+    background-size: cover;
+    left: 37%;
+    top: 68%;
+  }
+
+  #play_game2 {
     cursor: pointer;
     position: absolute;
     width: 20%;
