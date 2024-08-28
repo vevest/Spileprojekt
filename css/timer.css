@@ -2,7 +2,7 @@
 
 #timer-outline{
     position: absolute;
-    width: 3.1vw;
+    width: 3.2vw;
     height: 19vw;
     top: 15vw;
     left: 93vw;
@@ -21,7 +21,7 @@
 
 .shrink{
     animation-name: shrink_time;
-    animation-duration: 20s;
+    animation-duration: 60s;
     animation-iteration-count: 1;
     animation-timing-function:linear;
     animation-fill-mode:forwards;
