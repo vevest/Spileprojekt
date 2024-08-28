@@ -104,6 +104,17 @@ nav a{
     background-size: cover;
   }
 
+  #instructions {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(assets/instructions.svg);
+    background-color: white;
+    background-size: cover;
+  }
+
 #game_ui {
     width: 100%;
     height: 100%;
@@ -434,5 +445,20 @@ nav a{
   
   .delay4 {
     animation-delay: 1.5s;
+  }
+
+
+  /*------ morten-------*/
+
+  #morten_container {
+    background-image: url(assets/Kat.svg);
+    background-size: cover;
+    aspect-ratio: 220/290;
+    position: absolute;
+    top: 84%;
+    left: 92%;
+    width: 12%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
   }
 
