@@ -199,6 +199,7 @@ nav a{
 /* -----------------klikbarer elementer ----------*/
 
 #figma_container{
+    cursor: grab;
     width: 8%;
     aspect-ratio: 212/214;
     position:absolute;
@@ -212,6 +213,7 @@ nav a{
 }
 
 #fail_container{
+    cursor: grab;
     width: 7%;
     aspect-ratio: 230/192;
     position:absolute;
@@ -225,6 +227,7 @@ nav a{
 }
 
 #zipfil_container{
+    cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
@@ -238,6 +241,7 @@ nav a{
 }
 
 #adobe_container{
+    cursor: grab;
     width: 10%;
     aspect-ratio: 431/439;
     position:absolute;
@@ -251,6 +255,7 @@ nav a{
 }
 
 #beer_container{
+    cursor: grab;
     width: 10%;
     aspect-ratio: 431/439;
     position:absolute;
@@ -264,6 +269,7 @@ nav a{
 }
 
 #diagram_container{
+    cursor: grab;
     width: 9%;
     aspect-ratio: 431/439;
     position:absolute;
@@ -277,6 +283,7 @@ nav a{
 }
 
 #loop_container{
+    cursor: grab;
     width: 8%;
     aspect-ratio: 212/214;
     position:absolute;
@@ -290,6 +297,7 @@ nav a{
 }
 
 #malerpalette_container{
+    cursor: grab;
     width: 7%;
     aspect-ratio: 230/192;
     position:absolute;
@@ -303,6 +311,7 @@ nav a{
 }
 
 #vscode_container{
+    cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
@@ -316,6 +325,7 @@ nav a{
 }
 
 #github_container{
+    cursor: grab;
     width: 8%;
     aspect-ratio: 212/214;
     position:absolute;
@@ -329,6 +339,7 @@ nav a{
 }
 
 #pillow_container{
+    cursor: grab;
     width: 7%;
     aspect-ratio: 230/192;
     position:absolute;
@@ -341,7 +352,8 @@ nav a{
     background-size: cover;
 }
 
-#talebobler{
+#talebobler_container{
+    cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;

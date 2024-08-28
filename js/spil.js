@@ -131,6 +131,7 @@ function clickBeer() {
   document.querySelector("#beer_container").removeEventListener("mousedown", clickBeer);
   document.querySelector("#beer_container").classList.add("frys");
   document.querySelector("#beer_sprite").classList.add("zoom");
+  
   document.querySelector("#fedt").play();
 
   document.querySelector("#beer_container").addEventListener("animationend", resetBeer);
@@ -184,8 +185,8 @@ function stopSpillet() {
   document.querySelector("#beer_sprite").classList = "";
 
   // fjerner alle eventListeners
-  document.querySelector("#adobe_sprite").removeEventListener("mousedown", clickWhiteDandelion);
-  document.querySelector("#beer_sprite").removeEventListener("mousedown", clickYellowDandelion);
+  document.querySelector("#adobe_sprite").removeEventListener("mousedown", clickAdobe);
+  document.querySelector("#beer_sprite").removeEventListener("mousedown", clickBeer);
   
   document.querySelector("#adobe_container").removeEventListener("animationend", addOnePoint);
   document.querySelector("#beer_container").removeEventListener("animationend", addOnePoint);
@@ -200,13 +201,7 @@ function stopSpillet() {
   }
 }
 
-function gameOver() {
-  console.log("Funktionen gameOver");
-  hideAllScreens();
-  document.querySelector("#game_over").classList.remove("hide");
-  document.querySelector("#play_again1").classList.add("pulse");
-  document.querySelector("#play_again1").addEventListener("click", startSpil);
-}
+
 
 function levelComplete1() {
   console.log("Funktionen levelComplete1");
@@ -214,6 +209,13 @@ function levelComplete1() {
   document.querySelector("#play_again1").classList.add("pulse");
   document.querySelector("#play_again1").addEventListener("click", startSpil);
 }
+
+function levelComplete2() {
+    console.log("Funktionen levelComplete2");
+    document.querySelector("#level_complete2").classList.remove("hide");
+    document.querySelector("#play_again2").classList.add("pulse");
+    document.querySelector("#play_again2").addEventListener("click", startSpil);
+  }
 
 // --------------------------------- Points ---------------------------------
 
