@@ -77,10 +77,11 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-island.png);
+    background-image: url(img/endscreen-presentation.png);
     background-color: white;
     background-size: cover;
   }
+
 
   #level_complete4 {
     width: 100%;
@@ -88,7 +89,7 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-joe.png);
+    background-image: url(img/endscreen-island.png);
     background-color: white;
     background-size: cover;
   }
@@ -99,10 +100,12 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-presentation.png);
+    background-image: url(img/endscreen-joe.png);
     background-color: white;
     background-size: cover;
   }
+
+  
 
   #instructions {
     width: 100%;
@@ -248,7 +251,7 @@ nav a{
 }
 
 #beer_container{
-    width: 9%;
+    width: 10%;
     aspect-ratio: 431/439;
     position:absolute;
 }
@@ -403,7 +406,7 @@ nav a{
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
+    aspect-ratio: 1146/393 ;
     background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
@@ -414,7 +417,7 @@ nav a{
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
+    aspect-ratio: 1146/393 ;
     background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
@@ -424,7 +427,7 @@ nav a{
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
+    aspect-ratio: 1146/393 ;
     background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
@@ -435,7 +438,7 @@ nav a{
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
+    aspect-ratio: 1146/393 ;
     background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
@@ -446,7 +449,7 @@ nav a{
     cursor: pointer;
     position: absolute;
     width: 23%;
-    aspect-ratio: 530/150 ;
+    aspect-ratio: 1146/393 ;
     background-image: url("img/prøv-igen.png");
     background-size: cover;
     left: 38%;
@@ -456,8 +459,8 @@ nav a{
 
 /*---------- positioner -----------*/
   .pos1 {
-    top: 51%;
-    left: 60%;
+    top: 55%;
+    left: 66%;
   }
   .pos2 {
     top: 62.5%;
@@ -467,10 +470,7 @@ nav a{
     top: 39%;
     left: 31%;
   }
-  /* .pos4 {
-    top: 40%;
-    left: 54%;
-  } */
+
 
 
 
@@ -479,15 +479,15 @@ nav a{
     animation-delay: 0s;
   }
   
-  .delay2 {
+.delay2 {
     animation-delay: 0.5s;
   }
   
-  .delay3 {
+.delay3 {
     animation-delay: 1s;
   }
   
-  .delay4 {
+.delay4 {
     animation-delay: 1.5s;
   }
 

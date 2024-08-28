@@ -56,14 +56,14 @@
     }
 }
 
-.zoom_in  {
-  animation-name: zoom_in;
+.zoom  {
+  animation-name: zoom;
   animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-@keyframes zoom_in {
+@keyframes zoom {
   90% {
     scale: 150%;
     opacity: 100%;

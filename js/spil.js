@@ -2,7 +2,11 @@ window.addEventListener("load", titleScreen);
 window.addEventListener("resize", windowResize);
 console.log("dit javaScript virker");
 
-
+let points1;
+let points2;
+let points3;
+let points4;
+let points5;
 let rndposition;
 // rndposition = generateRandomPosition(3);
 let rnddelay;
@@ -13,14 +17,17 @@ function titleScreen() {
   console.log("vis titel skærm");
   windowResize();
   hideAllScreens();
+  document.querySelector("#velkommen").volume = 1;
+  document.querySelector("#velkommen").play();
+
   document.querySelector("#title_screen").classList.remove("hide");
   document.querySelector("#play_game1").classList.add("pulse");
   document.querySelector("#play_game1").addEventListener("click", showInstructions);
 
-  document.querySelector("#velkommen").volume = 1;
-  document.querySelector("#velkommen").play();
+  
 
 }
+
 function showInstructions() {
   console.log("showInstructions");
   hideAllScreens();
@@ -33,15 +40,18 @@ function showInstructions() {
 }
 
 function startSpil() {
-//   points = 0;
-//   lives = 3;
-//   printPoints();
-//   printLives();
+    points1  = 0;
+    points2  = 0;
+    points3  = 0;
+    points4  = 0;
+    points5  = 0;
+
   hideAllScreens();
+ 
   console.log("funktionen startSpil");
 
-  document.querySelector("#baggrunds_lyd").volume = 0.5;
-  document.querySelector("#baggrunds_lyd").play();
+  document.querySelector("#baggrunds-lyd").volume = 0.2;
+  document.querySelector("#baggrunds-lyd").play();
 
   //------------------------------- Timer animation
   //Starter timer-animationen på masken
@@ -60,26 +70,22 @@ function startSpil() {
   document.querySelector("#adobe_container").classList.add("bounce");
 
   rndposition = generateRandomPosition(3);
-  document.querySelector("#sprout_container").classList = "pos" + rndposition;
+  document.querySelector("beer_container").classList = "pos" + rndposition;
   rnddelay = generateRandomDelay(4);
-  document.querySelector("#sprout_container").classList.add("delay" + rnddelay);
-  document.querySelector("#sprout_container").classList.add("hop");
+  document.querySelector("#beer_container").classList.add("delay" + rnddelay);
+  document.querySelector("#beer_container").classList.add("bounce");
 
-  rndposition = generateRandomPosition(3);
-  document.querySelector("#yellow_dandelion_container").classList = "pos" + rndposition;
-  rnddelay = generateRandomDelay(4);
-  document.querySelector("#yellow_dandelion_container").classList.add("delay" + rnddelay);
-  document.querySelector("#yellow_dandelion_container").classList.add("hop");
+  
+
 
   //Lytter efter om op_ned-animationen har kørt 1 gang
-  document.querySelector("#adobe_container").addEventListener("animationiteration", resetWhiteDandelion);
-  document.querySelector("#yellow_dandelion_container").addEventListener("animationiteration", resetYellowDandelion);
-  document.querySelector("#sprout_container").addEventListener("animationiteration", resetSprout);
+  document.querySelector("#adobe_container").addEventListener("animationiteration", resetAdobe);
+  document.querySelector("#beer_container").addEventListener("animationiteration", resetBeer);
+  
 
   // Adding eventlisteners to objects
-  document.querySelector("#adobe_container").addEventListener("mousedown", clickWhiteDandelion);
-  document.querySelector("#sprout_container").addEventListener("mousedown", clickSprout);
-  document.querySelector("#yellow_dandelion_container").addEventListener("mousedown", clickYellowDandelion);
+  document.querySelector("#adobe_container").addEventListener("mousedown", clickAdobe);
+  document.querySelector("#beer_container").addEventListener("mousedown", clickBeer);
 }
 
 // ---------------------------- Adobe ----------------------------
@@ -89,15 +95,13 @@ function clickAdobe() {
   document.querySelector("#adobe_container").removeEventListener("mousedown", clickAdobe);
 
   document.querySelector("#adobe_container").classList.add("frys");
-  document.querySelector("#adobe_sprite").classList.add("zoom_in");
-  
-  document.querySelector("#sådan").volume = 1.5;
-  document.querySelector("#sådan").play();
+  document.querySelector("#adobe_sprite").classList.add("zoom");
+    document.querySelector("#sådan").play();
 
   document.querySelector("#adobe_container").addEventListener("animationend", resetAdobe);
 
-  addTwoPoints();
-  printPoints();
+  addPoints1();
+ 
 }
 
 function resetAdobe() {
@@ -115,119 +119,82 @@ function resetAdobe() {
   // giver container flyveanimationen og en ny position
   document.querySelector("#adobe_container").classList.add("bounce");
 
-  rndposition = generateRandomPosition(6);
+  rndposition = generateRandomPosition(3);
   document.querySelector("#adobe_container").classList.add("pos" + rndposition);
 
   document.querySelector("#adobe_container").addEventListener("mousedown", clickAdobe);
 }
 
-// ---------------------------- Yellow Dandelion ----------------------------
-function clickYellowDandelion() {
-  console.log("funktionen clickYellowDandelion");
-  document.querySelector("#yellow_dandelion_container").removeEventListener("mousedown", clickYellowDandelion);
-  document.querySelector("#yellow_dandelion_container").classList.add("frys");
-  document.querySelector("#yellow_dandelion_sprite").classList.add("wiggle");
-  document.querySelector("#god_lyd2").play();
+// ---------------------------- Beer ----------------------------
+function clickBeer() {
+  console.log("funktionen clickBeer");
+  document.querySelector("#beer_container").removeEventListener("mousedown", clickBeer);
+  document.querySelector("#beer_container").classList.add("frys");
+  document.querySelector("#beer_sprite").classList.add("zoom");
+  document.querySelector("#fedt").play();
 
-  document.querySelector("#yellow_dandelion_container").addEventListener("animationend", resetYellowDandelion);
+  document.querySelector("#beer_container").addEventListener("animationend", resetBeer);
 
-  addOnePoint();
-  printPoints();
+  addPoints5();
+
 }
 
-function resetYellowDandelion() {
-  console.log("funktion resetYellowDandelion");
+function resetBeer() {
+  console.log("funktion resetBeer");
   // den opfatter når aniamtionerne fra "click" er færdige
-  document.querySelector("#yellow_dandelion_container").removeEventListener("animationend", resetYellowDandelion);
+  document.querySelector("#beer_container").removeEventListener("animationend", resetBeer);
 
   // fjerner alle klasser fra container
-  document.querySelector("#yellow_dandelion_container").classList = "";
+  document.querySelector("#beer_container").classList = "";
   // fjerner alle klasser fra sprite
-  document.querySelector("#yellow_dandelion_sprite").classList = "";
+  document.querySelector("#beer_sprite").classList = "";
 
   // giver browser en tænkepause inden den nye animation
-  document.querySelector("#yellow_dandelion_sprite").offsetLeft;
+  document.querySelector("#beer_sprite").offsetLeft;
 
   // giver container flyveanimationen og en ny position
-  document.querySelector("#yellow_dandelion_container").classList.add("hop");
+  document.querySelector("#beer_container").classList.add("bounce");
 
-  rndposition = generateRandomPosition(6);
-  document.querySelector("#yellow_dandelion_container").classList.add("pos" + rndposition);
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#beer_container").classList.add("pos" + rndposition);
 
-  document.querySelector("#yellow_dandelion_container").addEventListener("mousedown", clickYellowDandelion);
+  document.querySelector("#beer_container").addEventListener("mousedown", clickBeer);
 }
 
-// --------------------------------- Sprout ---------------------------------
-function clickSprout() {
-  console.log("funktionen clickSprout");
-  document.querySelector("#sprout_container").removeEventListener("mousedown", clickSprout);
-  document.querySelector("#sprout_container").classList.add("frys");
-  document.querySelector("#sprout_sprite").classList.add("wiggle");
-  document.querySelector("#no_lyd").play();
 
-  // er det her korrekt?????
-  document.querySelector("#sprout_container").addEventListener("animationend", removeLife);
-
-  removeLife();
-  printLives();
-
-  if (lives < 1) {
-    stopSpillet();
-  } else {
-    resetSprout();
-  }
-}
-
-function resetSprout() {
-  console.log("funktion resetSprout");
-
-  document.querySelector("#sprout_container").removeEventListener("animationend", resetSprout);
-
-  document.querySelector("#sprout_container").classList = "";
-  document.querySelector("#sprout_sprite").classList = "";
-
-  document.querySelector("#sprout_sprite").offsetLeft;
-
-  document.querySelector("#sprout_container").classList.add("hop");
-
-  rndposition = generateRandomPosition(6);
-  document.querySelector("#sprout_container").classList.add("pos" + rndposition);
-
-  document.querySelector("#sprout_container").addEventListener("mousedown", clickSprout);
-}
 
 // ------------------------------ Stop Spillet ------------------------------
 function stopSpillet() {
   console.log("Funktionen stopSpillet");
   hideAllScreens();
-  document.querySelector("#game_over").classList.remove("#hide");
+  document.querySelector("#level_complete1").classList.remove("#hide");
 
-  document.querySelector("#baggrunds_lyd").pause();
-  document.querySelector("#baggrunds_lyd").currentTime = 0;
+  document.querySelector("#baggrunds-lyd").pause();
+  document.querySelector("#baggrunds-lyd").currentTime = 0;
 
-  document.querySelector("#vand").classList = "";
-  document.querySelector("#vand").removeEventListener("animationend", stopSpillet);
+  document.querySelector("#timer-fill").classList = "";
+  document.querySelector("#timer-fill").removeEventListener("animationend", stopSpillet);
 
   // fjerner alle klasser fra container
-  document.querySelector("#white_dandelion_container").classList = "";
-  document.querySelector("#yellow_dandelion_container").classList = "";
-  document.querySelector("#sprout_container").classList = "";
-  // fjerner alle klasser fra sprite
-  document.querySelector("#white_dandelion_sprite").classList = "";
-  document.querySelector("#yellow_dandelion_sprite").classList = "";
-  document.querySelector("#sprout_sprite").classList = "";
-  // fjerner alle eventListeners
-  document.querySelector("#white_dandelion_sprite").removeEventListener("mousedown", clickWhiteDandelion);
-  document.querySelector("#yellow_dandelion_sprite").removeEventListener("mousedown", clickYellowDandelion);
-  document.querySelector("#sprout_sprite").removeEventListener("mousedown", clickSprout);
-  document.querySelector("#white_dandelion_container").removeEventListener("animationend", addOnePoint);
-  document.querySelector("#yellow_dandelion_container").removeEventListener("animationend", addOnePoint);
-  document.querySelector("#sprout_container").removeEventListener("animationend", removeLife);
+  document.querySelector("#adobe_container").classList = "";
+  document.querySelector("#beer_container").classList = "";
 
-  if (lives <= 0) {
-    gameOver();
-  } else if (points >= 20) {
-    levelComplete();
+  // fjerner alle klasser fra sprite
+  document.querySelector("#adobe_sprite").classList = "";
+  document.querySelector("#beer_sprite").classList = "";
+
+  // fjerner alle eventListeners
+  document.querySelector("#adobe_sprite").removeEventListener("mousedown", clickWhiteDandelion);
+  document.querySelector("#beer_sprite").removeEventListener("mousedown", clickYellowDandelion);
+  
+  document.querySelector("#adobe_container").removeEventListener("animationend", addOnePoint);
+  document.querySelector("#beer_container").removeEventListener("animationend", addOnePoint);
+  
+
+  if (points1 > 4) {
+    levelComplete1();
+  } else if (points2 > 4) {
+    levelComplete2();
   } else {
     gameOver();
   }
@@ -241,33 +208,37 @@ function gameOver() {
   document.querySelector("#play_again1").addEventListener("click", startSpil);
 }
 
-function levelComplete() {
-  console.log("Funktionen levelComplete");
-  document.querySelector("#level_complete").classList.remove("hide");
-  document.querySelector("#play_again2").classList.add("pulse");
-  document.querySelector("#play_again2").addEventListener("click", startSpil);
+function levelComplete1() {
+  console.log("Funktionen levelComplete1");
+  document.querySelector("#level_complete1").classList.remove("hide");
+  document.querySelector("#play_again1").classList.add("pulse");
+  document.querySelector("#play_again1").addEventListener("click", startSpil);
 }
 
 // --------------------------------- Points ---------------------------------
-function addTwoPoints() {
-  points = points + 2;
-}
 
-function addOnePoint() {
+function addPoints1() {
   points = points + 1;
 }
 
-function printPoints() {
-  document.querySelector("#points").textContent = points;
-}
+function addPoints2() {
+    points = points + 1;
+  }
 
-// --------------------------------- lives ---------------------------------
-function removeLife() {
-  lives = lives - 1;
-}
-function printLives() {
-  document.querySelector("#lives").textContent = lives;
-}
+function addPoints3() {
+    points = points + 1;
+  }
+
+function addPoints4() {
+    points = points + 1;
+  }
+
+
+function addPoints5() {
+    points = points + 1;
+  }
+
+
 
 // -------------------------------- Position --------------------------------
 function generateRandomPosition(max) {
