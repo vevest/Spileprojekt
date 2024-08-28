@@ -263,11 +263,5 @@ function hideAllScreens() {
 function windowResize() {
   let widthScreen = document.querySelector("#screen").clientWidth;
 
-//   let myFontInProcent1 = 5;
-//   let myFont1 = (widthScreen / 100) * myFontInProcent1;
-//   document.querySelector("#lives").style.fontSize = myFont1 + "px";
-
-//   let myFontInProcent2 = 5;
-//   let myFont2 = (widthScreen / 100) * myFontInProcent2;
-//   document.querySelector("#points").style.fontSize = myFont2 + "px";
+  
 }
