@@ -1,19 +1,20 @@
 /* eksempel på en grøn, gul rød timer*/
 
-#timer_container{
+#timer-outline{
     position: absolute;
-    width: 3vw;
+    width: 3.1vw;
     height: 19vw;
-    top: 34vw;
+    top: 15vw;
     left: 93vw;
     border: 2px solid black;
 }
 
-#timer_sprite{
+#timer-fill{
+    position: absolute;
     width: 3vw;
     height: 19vw;
-    top: 34vw;
-    left: 93vw;
+    top: 15.1vw;
+    left: 93.2vw;
     transform-origin: 50% 100%;
     background-color: limegreen;
 }

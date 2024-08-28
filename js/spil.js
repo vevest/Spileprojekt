@@ -2,10 +2,9 @@ window.addEventListener("load", titleScreen);
 window.addEventListener("resize", windowResize);
 console.log("dit javaScript virker");
 
-let points;
-let lives;
+
 let rndposition;
-// rndposition = generateRandomPosition(6);
+// rndposition = generateRandomPosition(3);
 let rnddelay;
 // rnddelay = generateRandomDelay(4);
 
@@ -16,9 +15,11 @@ function titleScreen() {
   hideAllScreens();
   document.querySelector("#title_screen").classList.remove("hide");
   document.querySelector("#play_game1").classList.add("pulse");
-  document.querySelector("#play_game1").addEventListener("click", startSpil);
-  document.querySelector("#see_instructions").classList.add("pulse");
-  document.querySelector("#see_instructions").addEventListener("click", showInstructions);
+  document.querySelector("#play_game1").addEventListener("click", showInstructions);
+
+  document.querySelector("#velkommen").volume = 1;
+  document.querySelector("#velkommen").play();
+
 }
 function showInstructions() {
   console.log("showInstructions");
@@ -26,13 +27,16 @@ function showInstructions() {
   document.querySelector("#instructions").classList.remove("hide");
   document.querySelector("#play_game2").classList.add("pulse");
   document.querySelector("#play_game2").addEventListener("click", startSpil);
+
+  document.querySelector("#fang-kompetencer").volume = 1;
+  document.querySelector("#fang-kompetencer").play();
 }
 
 function startSpil() {
-  points = 0;
-  lives = 3;
-  printPoints();
-  printLives();
+//   points = 0;
+//   lives = 3;
+//   printPoints();
+//   printLives();
   hideAllScreens();
   console.log("funktionen startSpil");
 
@@ -40,10 +44,10 @@ function startSpil() {
   document.querySelector("#baggrunds_lyd").play();
 
   //Starter timer-animationen på masken
-  document.querySelector("#vand").classList.add("vandkandetimer");
+  document.querySelector("#timer-fill").classList.add("shrink");
 
   // når timeranimationen er færdig kaldes funktionen stopSpillet()
-  document.querySelector("#vand").addEventListener("animationend", stopSpillet);
+  document.querySelector("#timer-fill").addEventListener("animationend", stopSpillet);
 
   // Adding classes to containers
   rndposition = generateRandomPosition(6);
