@@ -392,7 +392,7 @@ function levelComplete5() {
     console.log("Funktionen levelComplete5");
     document.querySelector("#level_complete5").classList.remove("hide");
     document.querySelector("#play_again5").classList.add("pulse");
-    document.querySelector("#play_again").addEventListener("click", startSpil);
+    document.querySelector("#play_again5").addEventListener("click", startSpil);
   }
 
 // --------------------------------- Points ---------------------------------
