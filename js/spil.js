@@ -196,10 +196,14 @@ function stopSpillet() {
     levelComplete1();
   } else if (points2 > 4) {
     levelComplete2();
-  } else {
-    gameOver();
+  } else if (points3 > 4) {
+    levelComplete3();
+  } else if (points4 > 4) {
+    levelComplete4();
+  }  else 
+    levelComplete5();
   }
-}
+
 
 
 
@@ -215,6 +219,27 @@ function levelComplete2() {
     document.querySelector("#level_complete2").classList.remove("hide");
     document.querySelector("#play_again2").classList.add("pulse");
     document.querySelector("#play_again2").addEventListener("click", startSpil);
+  }
+
+function levelComplete3() {
+    console.log("Funktionen levelComplete3");
+    document.querySelector("#level_complete3").classList.remove("hide");
+    document.querySelector("#play_again3").classList.add("pulse");
+    document.querySelector("#play_again3").addEventListener("click", startSpil);
+  }
+
+function levelComplete4() {
+    console.log("Funktionen levelComplete4");
+    document.querySelector("#level_complete4").classList.remove("hide");
+    document.querySelector("#play_again4").classList.add("pulse");
+    document.querySelector("#play_again4").addEventListener("click", startSpil);
+  }
+
+function levelComplete5() {
+    console.log("Funktionen levelComplete5");
+    document.querySelector("#level_complete5").classList.remove("hide");
+    document.querySelector("#play_again5").classList.add("pulse");
+    document.querySelector("#play_again").addEventListener("click", startSpil);
   }
 
 // --------------------------------- Points ---------------------------------
