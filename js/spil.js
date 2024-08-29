@@ -17,7 +17,7 @@ function titleScreen() {
 
   document.querySelector("#mortenskyllinger_screen").classList.remove("hide");
   document.querySelector("#play_game").classList.add("pulse");
-    document.querySelector("#play_game").addEventListener("click", getInstructions);
+  document.querySelector("#play_game").addEventListener("click", getInstructions);
 
 }
 
@@ -38,17 +38,17 @@ function showInstructions() {
   document.querySelector("#instructions").classList.remove("hide");
   document.querySelector("#play_game2").classList.add("pulse");
   document.querySelector("#play_game2").addEventListener("click", startSpil);
+  document.querySelector("#timer-fill").classList.remove("shrink");
 
   document.querySelector("#fang-kompetencer").volume = 1;
   document.querySelector("#fang-kompetencer").play();
 }
 
 function startSpil() {
-    points1  = 0;
-    points2  = 0;
-    points3  = 0;
-    points4  = 0;
-    points5  = 0;
+  points1 = 0;
+  points2 = 0;
+  points3 = 0;
+  points4 = 0;
 
   hideAllScreens();
  
@@ -56,6 +56,8 @@ function startSpil() {
 
   document.querySelector("#baggrunds-lyd").volume = 0.1;
   document.querySelector("#baggrunds-lyd").play();
+
+  startTimer();
 
   //------------------------------- Timer animation
   //Starter timer-animationen på masken
@@ -114,6 +116,20 @@ function startSpil() {
   document.querySelector("#figma_container").addEventListener("mousedown", clickFigma);
   document.querySelector("#diagram_container").addEventListener("mousedown", clickDiagram);
   document.querySelector("#zip_container").addEventListener("mousedown", clickZip);
+}
+
+//-------Start-timer funktion, så timer først starter efter mortens instruktioner
+function startTimer() {
+  console.log("Starter timeren");
+
+    // Sørg for, at timeren ikke har nogen aktive animationer fra før
+    document.querySelector("#timer-fill").classList.remove("shrink", "shrink-reverse");
+
+    // Tilføj timer-animationen igen
+    document.querySelector("#timer-fill").classList.add("shrink");
+
+    // Når animationen slutter, kaldes stopSpillet()
+    document.querySelector("#timer-fill").addEventListener("animationend", stopSpillet);
 }
 
 // ---------------------------- Adobe ----------------------------
@@ -308,54 +324,41 @@ function clickZip() {
 // ------------------------------ Stop Spillet ------------------------------
 function stopSpillet() {
   console.log("Funktionen stopSpillet");
-  hideAllScreens();
-  document.querySelector("#level_complete1").classList.remove("#hide");
+    hideAllScreens();
+    document.querySelector("#baggrunds-lyd").pause();
+    document.querySelector("#baggrunds-lyd").currentTime = 0;
 
-  document.querySelector("#baggrunds-lyd").pause();
-  document.querySelector("#baggrunds-lyd").currentTime = 0;
+    document.querySelector("#timer-fill").classList = "";
+    document.querySelector("#timer-fill").removeEventListener("animationend", stopSpillet);
+    document.querySelector("#timer-fill").classList.remove("shrink");
+    document.querySelector("#timer-fill").removeEventListener("animationend", stopSpillet);
 
-  document.querySelector("#timer-fill").classList = "";
-  document.querySelector("#timer-fill").removeEventListener("animationend", stopSpillet);
 
-  // fjerner alle klasser fra container
-  document.querySelector("#adobe_container").classList = "";
-  document.querySelector("#beer_container").classList = "";
-  document.querySelector("#figma_container").classList = "";
-  document.querySelector("#diagram_container").classList = "";
-  document.querySelector("#zip_container").classList = "";
+    // Fjern klasser fra containere og sprites
+    let containers = ["#adobe_container", "#beer_container", "#figma_container", "#diagram_container", "#zip_container"];
+    let sprites = ["#adobe_sprite", "#beer_sprite", "#figma_sprite", "#diagram_sprite", "#zip_sprite"];
+    
+    containers.forEach(container => document.querySelector(container).classList = "");
+    sprites.forEach(sprite => document.querySelector(sprite).classList = "");
 
-  // fjerner alle klasser fra sprite
-  document.querySelector("#adobe_sprite").classList = "";
-  document.querySelector("#beer_sprite").classList = "";
-  document.querySelector("#figma_sprite").classList = "";
-  document.querySelector("#diagram_sprite").classList = "";
-  document.querySelector("#zip_sprite").classList = "";
+    // Fjern eventListeners
+    containers.forEach(container => document.querySelector(container).removeEventListener("mousedown", clickAdobe));
+    containers.forEach(container => document.querySelector(container).removeEventListener("animationend", addPoints1));
 
-  // fjerner alle eventListeners
-  document.querySelector("#adobe_sprite").removeEventListener("mousedown", clickAdobe);
-  document.querySelector("#beer_sprite").removeEventListener("mousedown", clickBeer);
-  document.querySelector("#figma_sprite").removeEventListener("mousedown", clickFigma);
-  document.querySelector("#diagram_sprite").removeEventListener("mousedown", clickDiagram);
-  document.querySelector("#zip_sprite").removeEventListener("mousedown", clickZip);
-  
-  document.querySelector("#adobe_container").removeEventListener("animationend", addPoints1);
-  document.querySelector("#beer_container").removeEventListener("animationend", addPoints4);
-  document.querySelector("#figma_container").removeEventListener("animationend", addPoints1);
-  document.querySelector("#diagram_container").removeEventListener("animationend", addPoints3);
-  document.querySelector("#zip_container").removeEventListener("animationend", addPoints2);
-  
+    // Bestem hvilken slutskærm der skal vises
+    if (points1 > 4 && points1 >= points2 && points1 >= points3 && points1 >= points4) {
+        levelComplete1();
+    } else if (points2 > 4 && points2 >= points1 && points2 >= points3 && points2 >= points4) {
+        levelComplete2();
+    } else if (points3 > 4 && points3 >= points1 && points3 >= points2 && points3 >= points4) {
+        levelComplete3();
+    } else if (points4 > 4 && points4 >= points1 && points4 >= points2 && points4 >= points3) {
+        levelComplete4();
+    } else {
+        levelComplete5();
+    }
+}
 
-  if (points1 > 4) {
-    levelComplete1();
-  } else if (points2 > 4) {
-    levelComplete2();
-  } else if (points3 > 4) {
-    levelComplete3();
-  } else if (points4 > 4) {
-    levelComplete4();
-  }  else 
-    levelComplete5();
-  }
 
 
 
@@ -398,20 +401,20 @@ function levelComplete5() {
 // --------------------------------- Points ---------------------------------
 
 function addPoints1() {
-  points = points + 1;
+    points1 += 1;
 }
 
 function addPoints2() {
-    points = points + 1;
-  }
+    points2 += 1;
+}
 
 function addPoints3() {
-    points = points + 1;
-  }
+    points3 += 1;
+}
 
 function addPoints4() {
-    points = points + 1;
-  }
+    points4 += 1;
+}
 
 
 
