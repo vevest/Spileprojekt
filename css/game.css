@@ -558,7 +558,68 @@ nav a{
     transform: translate(-50%, -50%);
   }
 
-  /*------------- talebobler*/
+  #morten3 {
+    background-image: url(img/hello-morten.png);
+    background-size: cover;
+    aspect-ratio: 1646/2451;
+    position: absolute;
+    top: 46%;
+    left: 35%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  #morten4 {
+    background-image: url(img/peace-morten.png);
+    background-size: cover;
+    aspect-ratio: 3214/2269;
+    position: absolute;
+    top: 76%;
+    left: 15%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  #morten5 {
+    background-image: url(img/thumbs-up-morten.png);
+    background-size: cover;
+    aspect-ratio: 3198/2671;
+    position: absolute;
+    top: 76%;
+    left: 35%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  #morten6 {
+    background-image: url(img/peace-morten.png);
+    background-size: cover;
+    aspect-ratio: 3214/2269;
+    position: absolute;
+    top: 76%;
+    left: 15%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  #morten5 {
+    background-image: url(img/thumbs-up-morten-skrå.png);
+    background-size: cover;
+    aspect-ratio: 3236/3141;
+    position: absolute;
+    top: 76%;
+    left: 75%;
+    width: 32%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+
+  /*------------- talebobbel-------*/
 
   #talebobbel{
     width: 55%;
@@ -571,7 +632,7 @@ nav a{
 }
 
 
-/*-------timer------------*/
+/*------------------timer------------*/
 #timer-outline{
     position: absolute;
     width: 22px;

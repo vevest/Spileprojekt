@@ -368,6 +368,8 @@ function levelComplete1() {
   document.querySelector("#level_complete1").classList.remove("hide");
   document.querySelector("#play_again1").classList.add("pulse");
   document.querySelector("#play_again1").addEventListener("click", startSpil);
+
+  document.querySelector("#content").play();
 }
 
 function levelComplete2() {
@@ -375,6 +377,8 @@ function levelComplete2() {
     document.querySelector("#level_complete2").classList.remove("hide");
     document.querySelector("#play_again2").classList.add("pulse");
     document.querySelector("#play_again2").addEventListener("click", startSpil);
+
+    document.querySelector("#kodning").play();
   }
 
 function levelComplete3() {
@@ -382,6 +386,8 @@ function levelComplete3() {
     document.querySelector("#level_complete3").classList.remove("hide");
     document.querySelector("#play_again3").classList.add("pulse");
     document.querySelector("#play_again3").addEventListener("click", startSpil);
+
+    document.querySelector("#selvstændig").play();
   }
 
 function levelComplete4() {
@@ -389,6 +395,8 @@ function levelComplete4() {
     document.querySelector("#level_complete4").classList.remove("hide");
     document.querySelector("#play_again4").classList.add("pulse");
     document.querySelector("#play_again4").addEventListener("click", startSpil);
+
+    document.querySelector("#hype").play();
   }
 
 function levelComplete5() {
@@ -396,6 +404,8 @@ function levelComplete5() {
     document.querySelector("#level_complete5").classList.remove("hide");
     document.querySelector("#play_again5").classList.add("pulse");
     document.querySelector("#play_again5").addEventListener("click", startSpil);
+
+    document.querySelector("#joe").play();
   }
 
 // --------------------------------- Points ---------------------------------
