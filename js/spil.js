@@ -122,7 +122,24 @@ function startSpil() {
   rnddelay = generateRandomDelay(4);
   document.querySelector("#pillow_container").classList.add("delay" + rnddelay);
   document.querySelector("#pillow_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#git_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#git_container").classList.add("delay" + rnddelay);
+  document.querySelector("#git_container").classList.add("bounce");
   
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#vs_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#vs_container").classList.add("delay" + rnddelay);
+  document.querySelector("#vs_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#maler_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#maler_container").classList.add("delay" + rnddelay);
+  document.querySelector("#maler_container").classList.add("bounce");
 
 
   //Lytter efter om op_ned-animationen har kørt 1 gang
@@ -135,6 +152,9 @@ function startSpil() {
   document.querySelector("#loop_container").addEventListener("animationiteration", resetLoop);
   document.querySelector("#tale_container").addEventListener("animationiteration", resetTale);
   document.querySelector("#pillow_container").addEventListener("animationiteration", resetPillow);
+  document.querySelector("#git_container").addEventListener("animationiteration", resetGit);
+  document.querySelector("#vs_container").addEventListener("animationiteration", resetVs);
+  document.querySelector("#maler_container").addEventListener("animationiteration", resetMaler);
 
   
 
@@ -148,6 +168,9 @@ function startSpil() {
   document.querySelector("#loop_container").addEventListener("mousedown", clickLoop);
   document.querySelector("#tale_container").addEventListener("mousedown", clickTale);
   document.querySelector("#pillow_container").addEventListener("mousedown", clickPillow);
+  document.querySelector("#git_container").addEventListener("mousedown", clickGit);
+  document.querySelector("#vs_container").addEventListener("mousedown", clickVs);
+  document.querySelector("#maler_container").addEventListener("mousedown", clickMaler);
 
 }
 
@@ -501,6 +524,120 @@ function resetPillow() {
 }
 
 
+// ---------------------------- Git ----------------------------
+function clickGit() {
+  console.log("funktionen clickGit");
+  document.querySelector("#git_container").removeEventListener("mousedown", clickGit);
+  document.querySelector("#git_container").classList.add("frys");
+  document.querySelector("#git_sprite").classList.add("zoom");
+  
+  document.querySelector("#hype").play();
+
+  document.querySelector("#git_container").addEventListener("animationend", resetGit);
+
+  addPoints2();
+
+}
+
+function resetGit() {
+  console.log("funktion resetGit");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#git_container").removeEventListener("animationend", resetGit);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#git_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#git_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#git_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#git_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#git_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#git_container").addEventListener("mousedown", clickGit);
+}
+
+
+// ---------------------------- Vs ----------------------------
+function clickVs() {
+  console.log("funktionen clickVs");
+  document.querySelector("#vs_container").removeEventListener("mousedown", clickVs);
+  document.querySelector("#vs_container").classList.add("frys");
+  document.querySelector("#vs_sprite").classList.add("zoom");
+  
+  document.querySelector("#fedt").play();
+
+  document.querySelector("#vs_container").addEventListener("animationend", resetVs);
+
+  addPoints2();
+
+}
+
+function resetVs() {
+  console.log("funktion resetVs");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#vs_container").removeEventListener("animationend", resetVs);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#vs_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#vs_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#vs_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#vs_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#vs_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#vs_container").addEventListener("mousedown", clickVs);
+}
+
+
+// ---------------------------- Maler ----------------------------
+function clickMaler() {
+  console.log("funktionen clickMaler");
+  document.querySelector("#maler_container").removeEventListener("mousedown", clickMaler);
+  document.querySelector("#maler_container").classList.add("frys");
+  document.querySelector("#maler_sprite").classList.add("zoom");
+  
+  document.querySelector("#fedt").play();
+
+  document.querySelector("#maler_container").addEventListener("animationend", resetMaler);
+
+  addPoints1();
+
+}
+
+function resetMaler() {
+  console.log("funktion resetMaler");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#maler_container").removeEventListener("animationend", resetMaler);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#maler_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#maler_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#maler_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#maler_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#maler_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#maler_container").addEventListener("mousedown", clickMaler);
+}
+
+
 
 // ------------------------------ Stop Spillet ------------------------------
 function stopSpillet() {
@@ -516,8 +653,8 @@ function stopSpillet() {
 
 
     // Fjern klasser fra containere og sprites
-    let containers = ["#adobe_container", "#beer_container", "#figma_container", "#diagram_container", "#zip_container", "#fail_container", "#loop_container", "#tale_container", "#pillow_container"];
-    let sprites = ["#adobe_sprite", "#beer_sprite", "#figma_sprite", "#diagram_sprite", "#zip_sprite", "#fail_sprite", "#loop_sprite", "#tale_sprite", "#pillow_sprite"];
+    let containers = ["#adobe_container", "#beer_container", "#figma_container", "#diagram_container", "#zip_container", "#fail_container", "#loop_container", "#tale_container", "#pillow_container", "#git_container", "#vs_container", "#maler_container"];
+    let sprites = ["#adobe_sprite", "#beer_sprite", "#figma_sprite", "#diagram_sprite", "#zip_sprite", "#fail_sprite", "#loop_sprite", "#tale_sprite", "#pillow_sprite", "#git_sprite", "#vs_sprite", "#maler_sprite"];
     
     containers.forEach(container => document.querySelector(container).classList = "");
     sprites.forEach(sprite => document.querySelector(sprite).classList = "");

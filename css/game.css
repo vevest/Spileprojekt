@@ -325,14 +325,14 @@ nav a{
     background-size: cover;
 }
 
-#vscode_container{
+#vs_container{
     cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
 }
 
-#vscode_sprite{
+#vs_sprite{
     width: 100%;
     height: 100%;
     background-image: url(img/vscode.png);
