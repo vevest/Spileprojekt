@@ -104,7 +104,7 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-island.png);
+    background-image: url(img/endscreen-joe.png);
     background-color: white;
     background-size: cover;
   }
@@ -115,7 +115,7 @@ nav a{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/endscreen-joe.png);
+    background-image: url(img/endscreen-island.png);
     background-color: white;
     background-size: cover;
   }
@@ -563,9 +563,9 @@ nav a{
     background-size: cover;
     aspect-ratio: 1646/2451;
     position: absolute;
-    top: 46%;
-    left: 35%;
-    width: 32%;
+    top: 72%;
+    left: 27%;
+    width: 23%;
     /* positioner bare elementet */
     transform: translate(-50%, -50%);
   }
@@ -575,9 +575,9 @@ nav a{
     background-size: cover;
     aspect-ratio: 3214/2269;
     position: absolute;
-    top: 76%;
-    left: 15%;
-    width: 32%;
+    top: 73.5%;
+    left: 18%;
+    width: 42%;
     /* positioner bare elementet */
     transform: translate(-50%, -50%);
   }
@@ -587,33 +587,33 @@ nav a{
     background-size: cover;
     aspect-ratio: 3198/2671;
     position: absolute;
-    top: 76%;
-    left: 35%;
-    width: 32%;
+    top: 73%;
+    left: 83%;
+    width: 36%;
     /* positioner bare elementet */
     transform: translate(-50%, -50%);
   }
 
   #morten6 {
-    background-image: url(img/peace-morten.png);
-    background-size: cover;
-    aspect-ratio: 3214/2269;
-    position: absolute;
-    top: 76%;
-    left: 15%;
-    width: 32%;
-    /* positioner bare elementet */
-    transform: translate(-50%, -50%);
-  }
-
-  #morten5 {
     background-image: url(img/thumbs-up-morten-skrå.png);
     background-size: cover;
     aspect-ratio: 3236/3141;
     position: absolute;
-    top: 76%;
-    left: 75%;
-    width: 32%;
+    top: 67%;
+    left: 81%;
+    width: 38%;
+    /* positioner bare elementet */
+    transform: translate(-50%, -50%);
+  }
+
+  #morten7 {
+    background-image: url(img/peace-morten.png);
+    background-size: cover;
+    aspect-ratio: 3214/2269;
+    position: absolute;
+    top: 73.5%;
+    left: 81%;
+    width: 42%;
     /* positioner bare elementet */
     transform: translate(-50%, -50%);
   }
