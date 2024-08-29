@@ -311,14 +311,14 @@ nav a{
     background-size: cover;
 }
 
-#malerpalette_container{
+#maler_container{
     cursor: grab;
     width: 10%;
     aspect-ratio: 230/192;
     position:absolute;
 }
 
-#malerpalette_sprite{
+#maler_sprite{
     width: 100%;
     height: 100%;
     background-image: url(img/malerpalette.png);
@@ -339,14 +339,14 @@ nav a{
     background-size: cover;
 }
 
-#github_container{
+#git_container{
     cursor: grab;
     width: 10%;
     aspect-ratio: 212/214;
     position:absolute;
 }
 
-#github_sprite{
+#git_sprite{
     width: 100%;
     height: 100%;
     background-image: url(img/github.png);
@@ -367,14 +367,14 @@ nav a{
     background-size: cover;
 }
 
-#talebobler_container{
+#tale_container{
     cursor: grab;
     width: 12%;
     aspect-ratio: 1.5/1;
     position:absolute;
 }
 
-#talebobler_sprite{
+#tale_sprite{
     width: 100%;
     height: 100%;
     background-image: url(img/to-talebobler.png);

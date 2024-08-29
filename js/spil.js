@@ -99,6 +99,29 @@ function startSpil() {
   document.querySelector("#zip_container").classList.add("delay" + rnddelay);
   document.querySelector("#zip_container").classList.add("bounce");
 
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#fail_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#fail_container").classList.add("delay" + rnddelay);
+  document.querySelector("#fail_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#loop_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#loop_container").classList.add("delay" + rnddelay);
+  document.querySelector("#loop_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#tale_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#tale_container").classList.add("delay" + rnddelay);
+  document.querySelector("#tale_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#pillow_container").classList = "pos" + rndposition;
+  rnddelay = generateRandomDelay(4);
+  document.querySelector("#pillow_container").classList.add("delay" + rnddelay);
+  document.querySelector("#pillow_container").classList.add("bounce");
   
 
 
@@ -108,6 +131,11 @@ function startSpil() {
   document.querySelector("#figma_container").addEventListener("animationiteration", resetFigma);
   document.querySelector("#diagram_container").addEventListener("animationiteration", resetDiagram);
   document.querySelector("#zip_container").addEventListener("animationiteration", resetZip);
+  document.querySelector("#fail_container").addEventListener("animationiteration", resetFail);
+  document.querySelector("#loop_container").addEventListener("animationiteration", resetLoop);
+  document.querySelector("#tale_container").addEventListener("animationiteration", resetTale);
+  document.querySelector("#pillow_container").addEventListener("animationiteration", resetPillow);
+
   
 
   // Adding eventlisteners to objects
@@ -116,6 +144,11 @@ function startSpil() {
   document.querySelector("#figma_container").addEventListener("mousedown", clickFigma);
   document.querySelector("#diagram_container").addEventListener("mousedown", clickDiagram);
   document.querySelector("#zip_container").addEventListener("mousedown", clickZip);
+  document.querySelector("#fail_container").addEventListener("mousedown", clickFail);
+  document.querySelector("#loop_container").addEventListener("mousedown", clickLoop);
+  document.querySelector("#tale_container").addEventListener("mousedown", clickTale);
+  document.querySelector("#pillow_container").addEventListener("mousedown", clickPillow);
+
 }
 
 //-------Start-timer funktion, så timer først starter efter mortens instruktioner
@@ -318,7 +351,155 @@ function clickZip() {
   
     document.querySelector("#zip_container").addEventListener("mousedown", clickZip);
   }
+
+  // ---------------------------- Fail ----------------------------
+function clickFail() {
+  console.log("funktionen clickFail");
+  document.querySelector("#fail_container").removeEventListener("mousedown", clickFail);
+  document.querySelector("#fail_container").classList.add("frys");
+  document.querySelector("#fail_sprite").classList.add("zoom");
   
+  document.querySelector("#glem-ikke-hyggen").play();
+
+  document.querySelector("#fail_container").addEventListener("animationend", resetFail);
+
+  addPoints4();
+
+}
+
+function resetFail() {
+  console.log("funktion resetFail");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#fail_container").removeEventListener("animationend", resetFail);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#fail_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#fail_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#fail_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#fail_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#fail_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#fail_container").addEventListener("mousedown", clickFail);
+}
+
+// ---------------------------- Loop ----------------------------
+function clickLoop() {
+  console.log("funktionen clickLoop");
+  document.querySelector("#loop_container").removeEventListener("mousedown", clickLoop);
+  document.querySelector("#loop_container").classList.add("frys");
+  document.querySelector("#loop_sprite").classList.add("zoom");
+  
+  document.querySelector("#sådan").play();
+
+  document.querySelector("#loop_container").addEventListener("animationend", resetLoop);
+
+  addPoints3();
+
+}
+
+function resetLoop() {
+  console.log("funktion resetLoop");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#loop_container").removeEventListener("animationend", resetLoop);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#loop_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#loop_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#loop_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#loop_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#loop_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#loop_container").addEventListener("mousedown", clickLoop);
+}
+
+// ---------------------------- Tale ----------------------------
+function clickTale() {
+  console.log("funktionen clickTale");
+  document.querySelector("#tale_container").removeEventListener("mousedown", clickTale);
+  document.querySelector("#tale_container").classList.add("frys");
+  document.querySelector("#tale_sprite").classList.add("zoom");
+  
+  document.querySelector("#fedt").play();
+
+  document.querySelector("#tale_container").addEventListener("animationend", resetTale);
+
+  addPoints3();
+
+}
+
+function resetTale() {
+  console.log("funktion resetTale");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#tale_container").removeEventListener("animationend", resetTale);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#tale_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#tale_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#tale_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#tale_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#tale_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#tale_container").addEventListener("mousedown", clickTale);
+}
+
+// ---------------------------- Pillow ----------------------------
+function clickPillow() {
+  console.log("funktionen clickPillow");
+  document.querySelector("#pillow_container").removeEventListener("mousedown", clickPillow);
+  document.querySelector("#pillow_container").classList.add("frys");
+  document.querySelector("#pillow_sprite").classList.add("zoom");
+  
+  document.querySelector("#glem-ikke-hyggen").play();
+
+  document.querySelector("#pillow_container").addEventListener("animationend", resetPillow);
+
+  addPoints4();
+
+}
+
+function resetPillow() {
+  console.log("funktion resetPillow");
+  // den opfatter når animationerne fra "click" er færdige
+  document.querySelector("#pillow_container").removeEventListener("animationend", resetPillow);
+
+  // fjerner alle klasser fra container
+  document.querySelector("#pillow_container").classList = "";
+  // fjerner alle klasser fra sprite
+  document.querySelector("#pillow_sprite").classList = "";
+
+  // giver browser en tænkepause inden den nye animation
+  document.querySelector("#pillow_sprite").offsetLeft;
+
+  // giver container flyveanimationen og en ny position
+  document.querySelector("#pillow_container").classList.add("bounce");
+
+  rndposition = generateRandomPosition(3);
+  document.querySelector("#pillow_container").classList.add("pos" + rndposition);
+
+  document.querySelector("#pillow_container").addEventListener("mousedown", clickPillow);
+}
+
 
 
 // ------------------------------ Stop Spillet ------------------------------
@@ -335,8 +516,8 @@ function stopSpillet() {
 
 
     // Fjern klasser fra containere og sprites
-    let containers = ["#adobe_container", "#beer_container", "#figma_container", "#diagram_container", "#zip_container"];
-    let sprites = ["#adobe_sprite", "#beer_sprite", "#figma_sprite", "#diagram_sprite", "#zip_sprite"];
+    let containers = ["#adobe_container", "#beer_container", "#figma_container", "#diagram_container", "#zip_container", "#fail_container", "#loop_container", "#tale_container", "#pillow_container"];
+    let sprites = ["#adobe_sprite", "#beer_sprite", "#figma_sprite", "#diagram_sprite", "#zip_sprite", "#fail_sprite", "#loop_sprite", "#tale_sprite", "#pillow_sprite"];
     
     containers.forEach(container => document.querySelector(container).classList = "");
     sprites.forEach(sprite => document.querySelector(sprite).classList = "");
